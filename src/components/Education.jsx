@@ -76,7 +76,7 @@ const Education = () => {
                             <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full blur-3xl -z-10 group-hover:bg-light-purple/10 transition-colors"></div>
 
                             {/* Image Part */}
-                            <div className="w-full lg:w-1/3 aspect-video lg:aspect-square rounded-3xl overflow-hidden shadow-2xl border border-white/5">
+                            <div className="w-full lg:w-1/3 aspect-video lg:aspect-square rounded-3xl overflow-hidden border-t-2 border-t-light-purple/50 border-l-2 border-l-light-purple/50 border-r-2 border-r-sky-400/50 border-b-2 border-b-sky-400/50">
                                 <img
                                     src={edu.image}
                                     alt={edu.institution}

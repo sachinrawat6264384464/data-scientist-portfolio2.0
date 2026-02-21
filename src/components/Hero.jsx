@@ -49,7 +49,7 @@ const Hero = () => {
                         className="relative flex justify-center lg:justify-end"
                     >
                         <div className="relative w-80 h-80 sm:w-96 sm:h-96">
-                            <div className="absolute inset-0 rounded-full border-2 border-dashed border-red-500/50 animate-[spin_20s_linear_infinite]"></div>
+                            <div className="absolute inset-0 rounded-full border-2 border-dashed border-light-purple/50 animate-[spin_20s_linear_infinite]"></div>
                             <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-white/5 to-accent/20 p-2 shadow-2xl border border-white/10">
                                 <img
                                     src={profileImg}

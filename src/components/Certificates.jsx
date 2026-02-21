@@ -76,7 +76,7 @@ const Certificates = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-light-purple/40 hover:bg-white/10 transition-all duration-300 group backdrop-blur-md hover:neon-glow"
+                            className="p-8 rounded-3xl bg-white/5 border-t-2 border-t-light-purple/50 border-l-2 border-l-light-purple/50 border-r-2 border-r-sky-400/50 border-b-2 border-b-sky-400/50 hover:bg-white/10 transition-all duration-300 group backdrop-blur-md hover:neon-glow"
                         >
                             <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
                                 {cert.icon}

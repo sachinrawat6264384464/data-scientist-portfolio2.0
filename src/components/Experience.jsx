@@ -63,7 +63,7 @@ const Experience = () => {
                             {/* Timeline Marker */}
                             <div className="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-neon border-4 border-slate-900"></div>
 
-                            <div className="bg-white/5 p-8 rounded-3xl shadow-2xl border border-white/10 hover:border-accent/30 transition-all duration-300 backdrop-blur-md group">
+                            <div className="bg-white/5 p-8 rounded-3xl shadow-[0_0_30px_rgba(255,255,255,0.4)] border border-light-purple hover:border-sky-400 transition-all duration-300 backdrop-blur-md group">
                                 <div className="flex flex-wrap justify-between items-start mb-4 gap-4">
                                     <div>
                                         <h3 className="text-2xl font-black text-white group-hover:text-accent transition-colors">{exp.role}</h3>

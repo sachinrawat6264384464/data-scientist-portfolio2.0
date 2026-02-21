@@ -133,7 +133,7 @@ const Projects = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group bg-white/5 rounded-3xl overflow-hidden shadow-2xl border border-white/10 hover:border-light-purple/30 transition-all duration-300 backdrop-blur-md"
+                            className="group bg-white/5 rounded-3xl overflow-hidden hover:shadow-[0_0_30px_rgba(78,240,255,0.4)] border border-light-purple hover:border-sky-400 transition-all duration-300 backdrop-blur-md"
                         >
                             <div className="relative aspect-video overflow-hidden">
                                 <img
@@ -196,7 +196,7 @@ const Projects = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="group relative bg-white/5 p-6 rounded-3xl border border-white/10 hover:border-accent/30 transition-all backdrop-blur-md"
+                                className="group relative bg-white/5 p-6 rounded-3xl border border-light-purple hover:border-sky-400 hover:shadow-[0_0_20px_rgba(78,240,255,0.3)] transition-all backdrop-blur-md"
                             >
                                 <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-5">
                                     <img src={mini.image} alt={mini.title} className="w-full h-full object-cover grayscale-[50%] group-hover:grayscale-0 transition-all duration-500" />
@@ -217,7 +217,7 @@ const Projects = () => {
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            className="bg-gradient-to-br from-accent/20 to-light-purple/20 p-6 rounded-3xl border border-accent/30 flex flex-col items-center justify-center text-center space-y-4 shadow-[0_0_30px_rgba(78,240,255,0.1)] hover:shadow-[0_0_40px_rgba(78,240,255,0.2)] transition-all cursor-pointer group"
+                            className="bg-gradient-to-br from-accent/20 to-light-purple/20 p-6 rounded-3xl border border-light-purple flex flex-col items-center justify-center text-center space-y-4 hover:shadow-[0_0_40px_rgba(78,240,255,0.6)] transition-all cursor-pointer group"
                         >
                             <div className="p-4 bg-white/10 rounded-full border border-white/10 group-hover:scale-110 transition-transform">
                                 <Trophy className="text-accent" size={32} />
@@ -259,7 +259,7 @@ const Projects = () => {
                         >
                             <button
                                 onClick={() => setSelectedProject(null)}
-                                className="absolute top-6 right-6 p-2 bg-white/5 hover:bg-red-500/20 text-white hover:text-red-500 rounded-full transition-all z-10"
+                                className="absolute top-6 right-6 p-2 bg-white/5 hover:bg-light-purple/20 text-white hover:text-light-purple rounded-full transition-all z-10"
                             >
                                 <X size={24} />
                             </button>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Github } from 'lucide-react';
 
 const About = () => {
     return (
@@ -30,7 +31,7 @@ const About = () => {
                         transition={{ duration: 0.6 }}
                         className="relative"
                     >
-                        <div className="aspect-square rounded-3xl bg-white/5 overflow-hidden shadow-2xl border border-white/10 p-4 backdrop-blur-md">
+                        <div className="aspect-square rounded-3xl bg-white/5 overflow-hidden shadow-[0_0_30px_rgba(255,255,255,0.4)] border border-light-purple p-4 backdrop-blur-md">
                             <div className="w-full h-full rounded-2xl bg-gradient-to-br from-slate-900 to-accent/10 flex items-center justify-center p-8 border border-white/5">
                                 <p className="text-slate-300 italic text-center font-medium">
                                     "Data is a precious thing and will last longer than the systems themselves."
@@ -62,7 +63,7 @@ const About = () => {
                             </p>
                         </div>
 
-                        <div className="mt-10 grid grid-cols-2 gap-6">
+                        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-6">
                             <div>
                                 <h4 className="text-3xl font-black text-neon">0 - 1</h4>
                                 <p className="text-sm text-slate-400 font-black uppercase tracking-widest">Years of Experience</p>
@@ -70,6 +71,13 @@ const About = () => {
                             <div>
                                 <h4 className="text-3xl font-black text-light-purple drop-shadow-[0_0_10px_rgba(155,124,255,0.4)]">25+</h4>
                                 <p className="text-sm text-slate-400 font-black uppercase tracking-widest">Projects Completed</p>
+                            </div>
+                            <div>
+                                <h4 className="text-3xl font-black text-white flex items-center gap-2 mb-1">
+                                    <Github className="w-6 h-6 text-slate-400" />
+                                    50+
+                                </h4>
+                                <p className="text-sm text-slate-400 font-black uppercase tracking-widest">Repositories</p>
                             </div>
                         </div>
                     </motion.div>

@@ -79,17 +79,17 @@ const Skills = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="bg-white/5 p-8 rounded-3xl shadow-2xl border border-light-purple/10 hover:border-red-500/40 transition-all duration-300 hover:-translate-y-1 group backdrop-blur-md hover:shadow-red-500/40"
+                            className="bg-white/5 p-8 rounded-3xl shadow-2xl border border-sky-400 hover:border-sky-400/40 transition-all duration-300 hover:-translate-y-1 group backdrop-blur-md hover:shadow-sky-400/40"
                         >
-                            <div className="mb-6 p-4 rounded-2xl bg-white/5 w-fit group-hover:bg-red-500/10 transition-colors shadow-inner border border-white/5 group-hover:neon-glow group-hover:text-red-500 hover:shadow-[0_0_15px_rgba(239,68,68,0.4)]">
+                            <div className="mb-6 p-4 rounded-2xl bg-white/5 w-fit group-hover:bg-light-purple/10 transition-colors shadow-inner border border-white/5 group-hover:neon-glow group-hover:text-light-purple hover:shadow-[0_0_15px_rgba(155,124,255,0.4)]">
                                 {category.icon}
                             </div>
-                            <h3 className="text-2xl font-black text-white group-hover:text-red-500 transition-colors mb-4">{category.title}</h3>
+                            <h3 className="text-2xl font-black text-white group-hover:text-light-purple transition-colors mb-4">{category.title}</h3>
                             <div className="flex flex-wrap gap-2">
                                 {category.skills.map((skill) => (
                                     <span
                                         key={skill}
-                                        className="px-3 py-1.5 bg-white/5 text-slate-200 rounded-lg text-sm font-black uppercase tracking-wide group-hover:bg-red-500/10 group-hover:text-red-500 border border-white/10 transition-all"
+                                        className="px-3 py-1.5 bg-white/5 text-slate-200 rounded-lg text-sm font-black uppercase tracking-wide group-hover:bg-light-purple/10 group-hover:text-light-purple border border-white/10 transition-all"
                                     >
                                         {skill}
                                     </span>
