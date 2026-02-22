@@ -72,7 +72,7 @@ const Contact = () => {
                         initial={{ width: 0 }}
                         whileInView={{ width: "80px" }}
                         viewport={{ once: true }}
-                        className="h-1.5 bg-neon mx-auto mt-4 rounded-full"
+                        className="h-1.5 bg-brown mx-auto mt-4 rounded-full"
                     ></motion.div>
                     <p className="mt-4 text-slate-300 text-base lg:text-lg max-w-2xl mx-auto font-medium">
                         Have a project in mind or want to chat about AI? Feel free to reach out. I'm always open to new opportunities.
@@ -87,11 +87,11 @@ const Contact = () => {
                         viewport={{ once: true }}
                         className="space-y-8"
                     >
-                        <div className="bg-white/5 p-8 rounded-3xl shadow-2xl border border-light-purple backdrop-blur-md">
+                        <div className="bg-white/5 p-8 rounded-3xl shadow-2xl border border-brown/50 backdrop-blur-md">
                             <h3 className="text-xl font-black text-white mb-8">Contact Information</h3>
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
-                                    <div className="p-3 bg-white/5 rounded-xl text-accent shadow-inner border border-white/10">
+                                    <div className="p-3 bg-white/5 rounded-xl text-brown-light shadow-inner border border-white/10">
                                         <Mail size={24} />
                                     </div>
                                     <div className="flex flex-col gap-1 min-w-0">
@@ -100,7 +100,7 @@ const Contact = () => {
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
-                                    <div className="p-3 bg-white/5 rounded-xl text-accent shadow-inner border border-white/10">
+                                    <div className="p-3 bg-white/5 rounded-xl text-brown-light shadow-inner border border-white/10">
                                         <Phone size={24} />
                                     </div>
                                     <div>
@@ -109,7 +109,7 @@ const Contact = () => {
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
-                                    <div className="p-3 bg-white/5 rounded-xl text-accent shadow-inner border border-white/10">
+                                    <div className="p-3 bg-white/5 rounded-xl text-brown-light shadow-inner border border-white/10">
                                         <MapPin size={24} />
                                     </div>
                                     <div>
@@ -122,10 +122,10 @@ const Contact = () => {
                             <div className="mt-12 pt-8 border-t border-white/10">
                                 <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6 text-center">Follow Me</p>
                                 <div className="flex justify-center gap-4">
-                                    <a href="https://www.linkedin.com/in/sachin-rawatb/" className="p-3 rounded-xl bg-white/5 text-slate-400 hover:bg-light-purple hover:text-slate-900 transition-all shadow-lg border border-white/10 hover:border-light-purple hover:shadow-[0_0_20px_rgba(155,124,255,0.4)]">
+                                    <a href="https://www.linkedin.com/in/sachin-rawatb/" className="p-3 rounded-xl bg-white/5 text-slate-400 hover:bg-brown hover:text-white transition-all shadow-lg border border-white/10 hover:border-brown hover:shadow-[0_0_20px_rgba(169,132,103,0.4)]">
                                         <Linkedin size={20} />
                                     </a>
-                                    <a href="https://github.com/sachinrawat6264384464" className="p-3 rounded-xl bg-white/5 text-slate-400 hover:bg-light-purple hover:text-slate-900 transition-all shadow-lg border border-white/10 hover:border-light-purple hover:shadow-[0_0_20px_rgba(155,124,255,0.4)]">
+                                    <a href="https://github.com/sachinrawat6264384464" className="p-3 rounded-xl bg-white/5 text-slate-400 hover:bg-brown hover:text-white transition-all shadow-lg border border-white/10 hover:border-brown hover:shadow-[0_0_20px_rgba(169,132,103,0.4)]">
                                         <Github size={20} />
                                     </a>
 
@@ -141,7 +141,7 @@ const Contact = () => {
                         viewport={{ once: true }}
                         className="lg:col-span-2"
                     >
-                        <form ref={form} onSubmit={sendEmail} className="bg-white/5 p-10 rounded-3xl shadow-2xl border border-light-purple backdrop-blur-md relative overflow-hidden">
+                        <form ref={form} onSubmit={sendEmail} className="bg-white/5 p-10 rounded-3xl shadow-2xl border border-brown/50 backdrop-blur-md relative overflow-hidden">
                             {/* Success Overlay */}
                             {status.success && (
                                 <motion.div
@@ -176,7 +176,7 @@ const Contact = () => {
                                         name="from_name"
                                         placeholder="Enter your name"
                                         required
-                                        className="w-full px-5 py-4 bg-white/5 border border-sky-400 rounded-2xl focus:outline-none focus:ring-2 focus:ring-light-purple/20 focus:bg-white/10 text-white transition-all font-medium"
+                                        className="w-full px-5 py-4 bg-white/5 border border-brown/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brown/20 focus:bg-white/10 text-white transition-all font-medium"
                                     />
                                 </div>
                                 <div className="space-y-2">
@@ -186,7 +186,7 @@ const Contact = () => {
                                         name="reply_to"
                                         placeholder="Enter your email"
                                         required
-                                        className="w-full px-5 py-4 bg-white/5 border border-sky-400 rounded-2xl focus:outline-none focus:ring-2 focus:ring-light-purple/20 focus:bg-white/10 text-white transition-all font-medium"
+                                        className="w-full px-5 py-4 bg-white/5 border border-brown/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brown/20 focus:bg-white/10 text-white transition-all font-medium"
                                     />
                                 </div>
                             </div>
@@ -197,13 +197,13 @@ const Contact = () => {
                                     name="message"
                                     placeholder="How can I help you?"
                                     required
-                                    className="w-full px-5 py-4 bg-white/5 border border-sky-400 rounded-2xl focus:outline-none focus:ring-2 focus:ring-light-purple/20 focus:bg-white/10 text-white transition-all resize-none font-medium"
+                                    className="w-full px-5 py-4 bg-white/5 border border-brown/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brown/20 focus:bg-white/10 text-white transition-all resize-none font-medium"
                                 ></textarea>
                             </div>
                             <button
                                 type="submit"
                                 disabled={status.sending}
-                                className={`w-full md:w-auto px-10 py-4 bg-neon text-slate-900 rounded-2xl font-black flex items-center justify-center gap-2 transition-all hover:-translate-y-1 ${status.sending ? 'opacity-70 cursor-not-allowed' : 'hover:shadow-[0_0_20px_rgba(78,240,255,0.4)]'}`}
+                                className={`w-full md:w-auto px-10 py-4 bg-brown text-white rounded-2xl font-black flex items-center justify-center gap-2 transition-all hover:-translate-y-1 ${status.sending ? 'opacity-70 cursor-not-allowed' : 'hover:shadow-[0_0_20px_rgba(169,132,103,0.4)]'}`}
                             >
                                 {status.sending ? 'Sending...' : 'Send Message'} <Send size={20} className={status.sending ? 'animate-pulse' : ''} />
                             </button>

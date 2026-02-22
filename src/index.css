@@ -6,11 +6,11 @@
   --bg-primary: #5B2EFF;
   --bg-dark: #0F172A;
   /* Slate-900 deep dark */
-  --neon-cyan: #4EF0FF;
-  --light-purple: #9B7CFF;
+  --neon-cyan: #D4A373; /* Brown light */
+  --light-purple: #A98467; /* Brown DEFAULT */
   --text-light: #F5F3FF;
   --glass-bg: rgba(15, 23, 42, 0.7);
-  --purple-glow: rgba(155, 124, 255, 0.6);
+  --purple-glow: rgba(169, 132, 103, 0.4); /* Brown glow */
 
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

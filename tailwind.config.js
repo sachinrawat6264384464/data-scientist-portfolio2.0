@@ -10,6 +10,11 @@ export default {
                 'primary': '#0F172A', // Dark Blue (Slate-900)
                 'light-purple': '#9B7CFF',   // Soft purple
                 'accent': '#4EF0FF',         // Neon Cyan
+                'brown': {
+                    'light': '#D4A373',
+                    'DEFAULT': '#A98467',
+                    'dark': '#6C584C',
+                },
             },
             borderRadius: {
                 'xl': '1rem',

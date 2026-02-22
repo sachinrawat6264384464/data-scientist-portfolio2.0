@@ -13,11 +13,11 @@ const Hero = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        <span className="inline-block py-1 px-4 rounded-full bg-white/5 text-accent text-sm font-black uppercase tracking-widest mb-6 border border-white/10 neon-glow">
+                        <span className="inline-block py-1 px-4 rounded-full bg-brown-dark/10 text-brown-light text-sm font-black uppercase tracking-widest mb-6 border border-brown/20 neon-glow">
                             Welcome to my portfolio
                         </span>
                         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
-                            I'm <span className="text-neon">Sachin Rawat</span>,
+                            I'm <span className="text-brown-light">Sachin Rawat</span>,
                             <br /> Data Scientist
                         </h1>
                         <p className="text-lg sm:text-xl text-slate-300 mb-10 max-w-lg leading-relaxed font-medium">
@@ -27,7 +27,7 @@ const Hero = () => {
                         </p>
 
                         <div className="flex flex-wrap gap-4 items-center">
-                            <button className="flex items-center gap-2 px-8 py-4 bg-neon text-slate-900 rounded-xl font-black transition-all hover:-translate-y-1">
+                            <button className="flex items-center gap-2 px-8 py-4 bg-brown hover:bg-brown-light text-white rounded-xl font-black transition-all hover:-translate-y-1 shadow-[0_0_20px_rgba(169,132,103,0.3)]">
                                 Download Resume <Download size={20} />
                             </button>
 
@@ -49,8 +49,8 @@ const Hero = () => {
                         className="relative flex justify-center lg:justify-end"
                     >
                         <div className="relative w-80 h-80 sm:w-96 sm:h-96">
-                            <div className="absolute inset-0 rounded-full border-2 border-dashed border-light-purple/50 animate-[spin_20s_linear_infinite]"></div>
-                            <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-white/5 to-accent/20 p-2 shadow-2xl border border-white/10">
+                            <div className="absolute inset-0 rounded-full border-2 border-dashed border-brown/50 animate-[spin_20s_linear_infinite]"></div>
+                            <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-brown-dark/20 to-brown-light/20 p-2 shadow-2xl border border-white/10">
                                 <img
                                     src={profileImg}
                                     alt="Profile"

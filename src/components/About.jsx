@@ -19,7 +19,7 @@ const About = () => {
                         initial={{ width: 0 }}
                         whileInView={{ width: "80px" }}
                         viewport={{ once: true }}
-                        className="h-1.5 bg-neon mx-auto mt-4 rounded-full"
+                        className="h-1.5 bg-brown mx-auto mt-4 rounded-full"
                     ></motion.div>
                 </div>
 
@@ -31,15 +31,15 @@ const About = () => {
                         transition={{ duration: 0.6 }}
                         className="relative"
                     >
-                        <div className="aspect-square rounded-3xl bg-white/5 overflow-hidden shadow-[0_0_30px_rgba(255,255,255,0.4)] border border-light-purple p-4 backdrop-blur-md">
-                            <div className="w-full h-full rounded-2xl bg-gradient-to-br from-slate-900 to-accent/10 flex items-center justify-center p-8 border border-white/5">
+                        <div className="aspect-square rounded-3xl bg-white/5 overflow-hidden shadow-[0_0_30px_rgba(169,132,103,0.3)] border border-brown/50 p-4 backdrop-blur-md">
+                            <div className="w-full h-full rounded-2xl bg-gradient-to-br from-slate-900 to-brown/10 flex items-center justify-center p-8 border border-white/5">
                                 <p className="text-slate-300 italic text-center font-medium">
                                     "Data is a precious thing and will last longer than the systems themselves."
                                 </p>
                             </div>
                         </div>
                         {/* Decorative elements */}
-                        <div className="absolute -top-6 -right-6 h-24 w-24 bg-accent/10 rounded-full blur-2xl -z-10"></div>
+                        <div className="absolute -top-6 -right-6 h-24 w-24 bg-brown/10 rounded-full blur-2xl -z-10"></div>
                     </motion.div>
 
                     <motion.div
@@ -65,11 +65,11 @@ const About = () => {
 
                         <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-6">
                             <div>
-                                <h4 className="text-3xl font-black text-neon">0 - 1</h4>
+                                <h4 className="text-3xl font-black text-brown-light">0 - 1</h4>
                                 <p className="text-sm text-slate-400 font-black uppercase tracking-widest">Years of Experience</p>
                             </div>
                             <div>
-                                <h4 className="text-3xl font-black text-light-purple drop-shadow-[0_0_10px_rgba(155,124,255,0.4)]">25+</h4>
+                                <h4 className="text-3xl font-black text-brown drop-shadow-[0_0_10px_rgba(169,132,103,0.4)]">25+</h4>
                                 <p className="text-sm text-slate-400 font-black uppercase tracking-widest">Projects Completed</p>
                             </div>
                             <div>
