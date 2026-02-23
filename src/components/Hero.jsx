@@ -11,6 +11,7 @@ import resume from './resume2.jpg';
 
 // Jab tak image nahi daali, null rahega — modal mein placeholder dikhega
 const resumeImgSrc = resume;
+const resumeUrl = resume;
 
 const Hero = () => {
     const [showResume, setShowResume] = useState(false);
@@ -19,7 +20,7 @@ const Hero = () => {
     // Resume image — apni resume ki soft copy image yahan import karo
     // import resumeImg from './resume.jpg'; // <-- uncomment karke apni image daal do
     const resumeImg = resume; // placeholder (image import karne ke baad yahan naam dalo)
-    const resumeUrl = '/ffy.jpg';
+    const resumeUrl_local = '/resume2.jpg';
 
     return (
         <section id="home" className="min-h-screen pt-32 pb-16 flex items-center bg-slate-900 text-white">

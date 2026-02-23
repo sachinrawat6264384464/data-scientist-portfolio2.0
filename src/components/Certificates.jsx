@@ -6,6 +6,7 @@ import sipl from './sipl.jpg';
 import unnati from './unnati.jpg';
 import intern from './inter1jpg.jpg';
 import kaggle from './kaggle.jpg';
+import aws from './aws.jpg';
 const Certificates = () => {
     const [selectedCert, setSelectedCert] = useState(null);
 
@@ -33,6 +34,14 @@ const Certificates = () => {
             id: 'AI/IN24/GWL/2405240',
             icon: <Award className="w-10 h-10 text-brown-light shadow-[0_0_10px_rgba(169,132,103,0.4)]" />,
             image: ffy,
+        },
+        {
+            title: 'Introduction to Generative AI – Art of the Possible',
+            issuer: 'AWS skills builder',
+            date: 'Feb/2026',
+            id: '----',
+            icon: <ShieldCheck className="w-10 h-10 text-brown-light shadow-[0_0_10px_rgba(169,132,103,0.4)]" />,
+            image: aws,
         },
         {
             title: 'Soft Skills Development',

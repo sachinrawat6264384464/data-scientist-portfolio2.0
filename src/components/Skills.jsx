@@ -50,10 +50,6 @@ const Skills = () => {
 
     const personalTraits = [
         { label: 'Quick Learner', emoji: '⚡' },
-        { label: 'Problem Solver', emoji: '🧩' },
-        { label: 'Explorer', emoji: '🔍' },
-        { label: 'Dedicated', emoji: '💪' },
-        { label: 'Punctual', emoji: '⏰' },
         { label: 'Team Player', emoji: '🤝' },
         { label: 'Analytical Thinker', emoji: '🧠' },
         { label: 'Strong Problem-Solving Mindset', emoji: '✔' },
