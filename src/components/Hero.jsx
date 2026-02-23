@@ -135,7 +135,7 @@ const Hero = () => {
                                     {/* Download Button */}
                                     <a
                                         href={resumeImg}
-                                        download="Sachin_Rawat_Resume.pdf"
+                                        download="Sachin Rawat resume (1).pdf"
                                         className="flex items-center gap-2 px-4 py-2 bg-brown hover:bg-brown-light text-white rounded-xl text-sm font-black transition-all hover:shadow-[0_0_15px_rgba(169,132,103,0.4)]"
                                     >
                                         <Download size={16} /> Download Resume
@@ -198,7 +198,7 @@ const Hero = () => {
 
                                     <a
                                         href={resumeImg}
-                                        download="Sachin_Rawat_Resume.pdf"
+                                        download="Sachin Rawat resume (1).pdf"
                                         className="flex items-center gap-2 px-4 py-2 bg-brown hover:bg-brown-light text-white rounded-xl text-sm font-black transition-all hover:shadow-[0_0_15px_rgba(169,132,103,0.4)]"
                                     >
                                         <Download size={16} /> Download Resume
