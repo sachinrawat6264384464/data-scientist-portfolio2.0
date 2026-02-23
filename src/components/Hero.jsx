@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Linkedin, Download, X, FileText, Eye } from 'lucide-react';
 import profileImg from './myimage.jpg';
-import resume from './resume2.jpg';
+import resume from './re.jpg';
 import dd from './SACHIN RAWAT resume (1).pdf';
 
 // ✅ STEP 1: Apni resume image yahan rename karke 'resumeImg.jpg' rakho
@@ -11,8 +11,8 @@ import dd from './SACHIN RAWAT resume (1).pdf';
 // import resumeImgSrc from './resumeImg.jpg';
 
 // Jab tak image nahi daali, null rahega — modal mein placeholder dikhega
-const resumeImgSrc = dd;
-const resumeUrl = dd;
+const resumeImgSrc = resume;
+const resumeUrl = resume;
 
 const Hero = () => {
     const [showResume, setShowResume] = useState(false);
@@ -48,12 +48,7 @@ const Hero = () => {
                         <div className="flex flex-wrap gap-4 items-center">
 
                             {/* Button 1 — Mini screen (PDF viewer) */}
-                            <button
-                                onClick={() => setShowResume(true)}
-                                className="flex items-center gap-2 px-7 py-4 bg-brown hover:bg-brown-light text-white rounded-xl font-black transition-all hover:-translate-y-1 shadow-[0_0_20px_rgba(169,132,103,0.3)]"
-                            >
-                                <Eye size={20} /> Mini Screen
-                            </button>
+
 
                             {/* Button 2 — Resume Image */}
                             <button
