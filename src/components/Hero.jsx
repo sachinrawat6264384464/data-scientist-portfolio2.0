@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Linkedin, Download, X, FileText, Eye } from 'lucide-react';
 import profileImg from './myimage.jpg';
 import resume from './resume2.jpg';
+import dd from './Sachin Rawat resume (1).pdf';
 
 // ✅ STEP 1: Apni resume image yahan rename karke 'resumeImg.jpg' rakho
 //            Location: src/components/resumeImg.jpg
@@ -10,8 +11,8 @@ import resume from './resume2.jpg';
 // import resumeImgSrc from './resumeImg.jpg';
 
 // Jab tak image nahi daali, null rahega — modal mein placeholder dikhega
-const resumeImgSrc = resume;
-const resumeUrl = resume;
+const resumeImgSrc = dd;
+const resumeUrl = dd;
 
 const Hero = () => {
     const [showResume, setShowResume] = useState(false);
@@ -19,8 +20,8 @@ const Hero = () => {
 
     // Resume image — apni resume ki soft copy image yahan import karo
     // import resumeImg from './resume.jpg'; // <-- uncomment karke apni image daal do
-    const resumeImg = resume; // placeholder (image import karne ke baad yahan naam dalo)
-    const resumeUrl_local = '/resume2.jpg';
+    const resumeImg = dd; // placeholder (image import karne ke baad yahan naam dalo)
+    const resumeUrl_local = './Sachin Rawat resume (1).pdf';
 
     return (
         <section id="home" className="min-h-screen pt-32 pb-16 flex items-center bg-slate-900 text-white">
@@ -134,7 +135,7 @@ const Hero = () => {
                                     {/* Download Button */}
                                     <a
                                         href={resumeImg}
-                                        download="Sachin_Rawat_Resume.jpg"
+                                        download="Sachin_Rawat_Resume.pdf"
                                         className="flex items-center gap-2 px-4 py-2 bg-brown hover:bg-brown-light text-white rounded-xl text-sm font-black transition-all hover:shadow-[0_0_15px_rgba(169,132,103,0.4)]"
                                     >
                                         <Download size={16} /> Download Resume
@@ -197,7 +198,7 @@ const Hero = () => {
 
                                     <a
                                         href={resumeImg}
-                                        download="Sachin_Rawat_Resume.jpg"
+                                        download="Sachin_Rawat_Resume.pdf"
                                         className="flex items-center gap-2 px-4 py-2 bg-brown hover:bg-brown-light text-white rounded-xl text-sm font-black transition-all hover:shadow-[0_0_15px_rgba(169,132,103,0.4)]"
                                     >
                                         <Download size={16} /> Download Resume
