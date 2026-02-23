@@ -1,47 +1,70 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, School, BookOpen, MapPin, Calendar } from 'lucide-react';
+import { GraduationCap, School, BookOpen, MapPin, Calendar, ArrowUpRight } from 'lucide-react';
+import sco from './school.jpg';
+import poly from './diplomaa.jpg';
+import acro from './acro.jpg';
 
 const Education = () => {
     const educationData = [
         {
-            type: "Degree",
-            title: "B.Tech in Information Technology",
-            institution: "Acropolis Institute of Technology and Research (AITR)",
-            location: "Indore, Madhya Pradesh",
-            duration: "2025 - 2028",
-            university: "RGPV University",
-            description: "Currently pursuing Bachelor of Technology in Information Technology, focusing on software development and data-driven solutions.",
-            icon: <GraduationCap className="h-8 w-8 text-brown-light" />,
-            image: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2686&auto=format&fit=crop"
+            type: 'Degree',
+            title: 'B.Tech in Information Technology',
+            institution: 'Acropolis Institute of Technology and Research (AITR)',
+            location: 'Indore, Madhya Pradesh',
+            duration: '2025 - 2028',
+            university: 'RGPV University',
+            description: 'Currently pursuing Bachelor of Technology in Information Technology, focusing on software development and data-driven solutions.',
+            icon: <GraduationCap className="h-7 w-7" />,
+            image: acro,
+            status: 'Pursuing',
         },
         {
-            type: "Diploma",
-            title: "Diploma in Information Technology",
-            institution: "Dr. Bhim Rao Ambedkar Polytechnic College",
-            location: "Gwalior, Madhya Pradesh",
-            duration: "2022 - 2025",
-            university: "RGPV University",
-            description: "Completed Polytechnic Diploma in Information Technology with a strong foundation in core IT principles and technical skills.",
-            icon: <School className="h-8 w-8 text-brown" />,
-            image: "https://images.unsplash.com/photo-1541339907198-e08756ebafe3?q=80&w=2670&auto=format&fit=crop"
+            type: 'Diploma',
+            title: 'Diploma in Information Technology',
+            institution: 'Dr. Bhim Rao Ambedkar Polytechnic College',
+            location: 'Gwalior, Madhya Pradesh',
+            duration: '2022 - 2025',
+            university: 'RGPV University',
+            description: 'Completed Polytechnic Diploma in Information Technology with a strong foundation in core IT principles and technical skills.',
+            icon: <School className="h-7 w-7" />,
+            image: poly,
+            status: 'Completed',
         },
         {
-            type: "Schooling",
-            title: "Secondary School (10th)",
-            institution: "Secondary Education Board",
-            location: "Madhya Pradesh",
-            duration: "Passout 2022",
-            university: "Board of Secondary Education",
-            description: "Successfully completed secondary education with a focus on science and mathematics.",
-            icon: <BookOpen className="h-8 w-8 text-brown-light" />,
-            image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2622&auto=format&fit=crop"
-        }
+            type: 'Schooling',
+            title: 'Secondary School (10th)',
+            institution: 'Secondary Education Board',
+            location: 'Madhya Pradesh',
+            duration: 'Passout 2022',
+            university: 'Board of Secondary Education',
+            description: 'Successfully completed secondary education with a focus on science and mathematics.',
+            icon: <BookOpen className="h-7 w-7" />,
+            image: sco,
+            status: 'Completed',
+        },
     ];
+
+    const typeColors = {
+        Degree: 'from-emerald-500/20 to-emerald-500/5 border-emerald-500/30',
+        Diploma: 'from-amber-500/20 to-amber-500/5 border-amber-500/30',
+        Schooling: 'from-blue-500/20 to-blue-500/5 border-blue-500/30',
+    };
+
+    const badgeColors = {
+        Degree: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30',
+        Diploma: 'bg-amber-500/10 text-amber-400 border-amber-500/30',
+        Schooling: 'bg-blue-500/10 text-blue-400 border-blue-500/30',
+    };
+
+    const statusColors = {
+        Pursuing: 'bg-green-500/10 text-green-400 border-green-500/30',
+        Completed: 'bg-slate-500/10 text-slate-400 border-slate-500/30',
+    };
 
     return (
         <section id="education" className="py-24 bg-slate-900 border-t border-white/5">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -57,64 +80,90 @@ const Education = () => {
                         viewport={{ once: true }}
                         className="h-1.5 bg-brown mx-auto mt-4 rounded-full"
                     ></motion.div>
-                    <p className="mt-4 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto font-medium">
-                        My educational journey and the institutions that have shaped my technical foundation.
-                    </p>
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="text-slate-400 mt-4 text-base font-medium max-w-lg mx-auto"
+                    >
+                        My educational journey and the institutions that shaped my technical foundation
+                    </motion.p>
                 </div>
 
-                <div className="space-y-12">
+                {/* Cards Grid — 3 columns on large, 1 on mobile */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {educationData.map((edu, index) => (
                         <motion.div
                             key={edu.title}
-                            initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="group relative flex flex-col lg:flex-row gap-8 bg-white/5 p-8 rounded-[2.5rem] border border-white/10 hover:border-brown/30 transition-all duration-500 backdrop-blur-md overflow-hidden hover:shadow-[0_0_40px_rgba(169,132,103,0.2)]"
+                            transition={{ duration: 0.5, delay: index * 0.15 }}
+                            className="group relative bg-white/[0.03] rounded-3xl border border-white/10 hover:border-brown/40 overflow-hidden transition-all duration-500 hover:shadow-[0_0_40px_rgba(169,132,103,0.15)] flex flex-col"
                         >
-                            {/* Background decoration */}
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-brown/5 rounded-full blur-3xl -z-10 group-hover:bg-brown/10 transition-colors"></div>
-
-                            {/* Image Part */}
-                            <div className="w-full lg:w-1/3 aspect-video lg:aspect-square rounded-3xl overflow-hidden border-t-2 border-t-brown/50 border-l-2 border-l-brown/50 border-r-2 border-r-brown-light/50 border-b-2 border-b-brown-light/50">
+                            {/* Image Section */}
+                            <div className="relative w-full h-48 overflow-hidden">
                                 <img
                                     src={edu.image}
                                     alt={edu.institution}
-                                    className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                    className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
                                 />
-                            </div>
+                                {/* Gradient overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
 
-                            {/* Content Part */}
-                            <div className="flex-1 flex flex-col justify-center">
-                                <div className="flex items-center gap-3 mb-4">
-                                    <div className="p-3 bg-white/5 rounded-2xl shadow-inner border border-white/5 group-hover:shadow-[0_0_15px_rgba(169,132,103,0.3)] group-hover:text-brown transition-all duration-300">
-                                        {edu.icon}
-                                    </div>
-                                    <span className="text-brown-light text-sm font-black uppercase tracking-widest px-4 py-1.5 bg-white/5 rounded-full border border-white/10">
+                                {/* Type badge on image */}
+                                <div className="absolute top-4 left-4">
+                                    <span className={`inline-block text-[10px] font-black uppercase tracking-[0.2em] px-3 py-1 rounded-full border backdrop-blur-md ${badgeColors[edu.type]}`}>
                                         {edu.type}
                                     </span>
                                 </div>
 
-                                <h3 className="text-2xl sm:text-3xl font-black text-white group-hover:text-brown transition-colors mb-4">
+                                {/* Status badge */}
+                                <div className="absolute top-4 right-4">
+                                    <span className={`inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full border backdrop-blur-md ${statusColors[edu.status]}`}>
+                                        {edu.status === 'Pursuing' && <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />}
+                                        {edu.status}
+                                    </span>
+                                </div>
+
+                                {/* Icon at bottom of image */}
+                                <div className="absolute bottom-3 right-4 p-2.5 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-brown-light group-hover:bg-brown group-hover:text-white group-hover:rotate-12 transition-all duration-300">
+                                    {edu.icon}
+                                </div>
+                            </div>
+
+                            {/* Content */}
+                            <div className="p-6 flex flex-col flex-1">
+                                <h3 className="text-lg font-black text-white leading-tight group-hover:text-brown-light transition-colors mb-3">
                                     {edu.title}
                                 </h3>
 
-                                <div className="space-y-3 mb-6">
-                                    <div className="flex items-center gap-2 text-slate-300 font-bold">
-                                        <School size={18} className="text-brown-light" />
+                                <div className="space-y-2 mb-4">
+                                    <div className="flex items-center gap-2 text-brown-light text-sm font-bold">
+                                        <School size={14} />
                                         {edu.institution}
                                     </div>
-                                    <div className="flex items-center gap-2 text-slate-400 font-medium">
-                                        <MapPin size={18} />
+                                    <div className="flex items-center gap-2 text-slate-500 text-xs font-medium">
+                                        <MapPin size={13} />
                                         {edu.location}
                                     </div>
-                                    <div className="flex items-center gap-2 text-slate-400 font-medium">
-                                        <Calendar size={18} />
-                                        {edu.duration} • <span className="text-brown font-black">{edu.university}</span>
+                                    <div className="flex items-center gap-2 text-slate-500 text-xs font-medium">
+                                        <Calendar size={13} />
+                                        {edu.duration}
                                     </div>
                                 </div>
 
-                                <p className="text-slate-300 text-lg leading-relaxed font-medium line-clamp-3">
+                                {/* University Badge */}
+                                <div className="mb-4">
+                                    <span className="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest px-3 py-1.5 bg-brown/10 text-brown-light border border-brown/20 rounded-lg">
+                                        <GraduationCap size={12} />
+                                        {edu.university}
+                                    </span>
+                                </div>
+
+                                {/* Description */}
+                                <p className="text-slate-400 text-sm leading-relaxed font-medium mt-auto">
                                     {edu.description}
                                 </p>
                             </div>

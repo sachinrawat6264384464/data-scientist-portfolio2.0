@@ -1,102 +1,111 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, ArrowRight, X, Sparkles, Box, Trophy } from 'lucide-react';
+import cus from './cus.png';
+import win from './win.png';
+import jj from './jj.png';
+import hh from './hh.png';
+import dd from './ddpng.png';
+import nn from './nn.png';
+import student from './student.jpg';
+import sales from './sales.jpg';
+import solar from './solar.jpg';
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
 
     const projects = [
         {
-            title: 'AI Sentiment Analyzer',
-            description: 'A deep learning project using Transformer models to analyze sentiment across 1M+ tweets in real-time.',
-            fullDetail: 'An advanced NLP system built on BERT architecture, fine-tuned for high-velocity tweet analysis with custom tokenization.',
-            performance: 'Processed 1.2M tweets/hour with 89% sentiment accuracy and <50ms latency.',
-            tech: ['Python', 'PyTorch', 'FastAPI', 'Redis'],
-            image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2670&auto=format&fit=crop',
-            github: '#',
-            demo: '#',
+            title: 'customer churn prediction',
+            description: 'Customer Churn Prediction + RFM Segmentation (Machine Learning Project) I recently worked on an exciting Customer Analytics project where I combined RFM Analysis + Churn Prediction to understand customer behavior and improve retention strategies.',
+            fullDetail: "1 Customer Segmentation using RFM (Recency, Frequency, Monetary)2 Predicting whether a customer will Churn (Yes/No) using Machine LearningFinding actionable insights to help businesses reduce customer lossKey Steps I Performed:Data Cleaning & PreprocessingFeature Engineering (RFM Scoring + Segmentation)Customer Segmentation into categories ",
+            performance: 'accuracy score Y_train 0.73 and accuracy_score y_test 0.72.',
+            tech: ['Python', 'pandas', 'Scikit-Learn', 'RFM', 'Churn Prediction'],
+            image: cus,
+            github: 'https://github.com/sachinrawat6264384464/Machine-Learning-Projects-Bigner-To-Advanced-Journey-Start-/blob/main/machine%20learning%20practice%20projects/customer%20churn%20prediction.ipynb',
+            demo: 'https://www.linkedin.com/posts/sachin-rawatb_machinelearning-datascience-customersegmentation-activity-7429739695590518785-7OGa?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6IRoUBzGzrkp84sI5KXdxL5plTuWQg3uc',
             type: 'featured'
         },
         {
-            title: 'Sales Forecast Engine',
+            title: '🍷Wine Quality Clustering',
             description: 'Predictive analytics platform for e-commerce that increased inventory accuracy by 25% using XGBoost.',
-            fullDetail: 'A sophisticated time-series forecasting model that integrates seasonal trends and promotional periods for retail optimization.',
+            fullDetail: 'To group wines into meaningful segments and analyze how these clusters relate to actual wine quality ratings.🧠 What I Did✅ Cleaned & standardized the dataset✅ Applied K-Means Clustering (k=4) for segmentation✅ Used PCA (2D Visualization) to visualize cluster separation✅ Performed Cluster vs Quality Relationship Analysis ✅ Interpreted clusters into real-world quality groups📊 Key Insights (Cluster Quality Analysis)I analyzed average quality per cluster and found clear differences:🔹 Cluster 1 → High Quality Segment (Avg Quality ≈ 6.00)🔹 Cluster 3 → Good Quality Segment (Avg Quality ≈ 5.87)🔹 Cluster 0 → Average Wines (Avg Quality ≈ 5.30)🔹 Cluster 2 → Rare / Low Quality Profile (Avg Quality ≈ 5.29, only 24 samples)',
             performance: 'Reduced stockouts by 30% and improved inventory turnover ratio by 1.8x within 6 months.',
-            tech: ['Python', 'Scikit-Learn', 'AWS', 'Looker'],
-            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop',
-            github: '#',
-            demo: '#',
+            tech: ['Pandas', 'Numpy', 'Scikit-learn (K-Means, PCA, StandardScaler)', 'Matplotlib', 'Seaborn'],
+            image: win,
+            github: 'https://github.com/sachinrawat6264384464/Machine-Learning-Projects-Bigner-To-Advanced-Journey-Start-/blob/main/machine%20learning%20practice%20projects/winequality.ipynb',
+            demo: 'https://www.linkedin.com/posts/sachin-rawatb_machinelearning-unsupervisedlearning-kmeans-activity-7429125190392999936-P5mE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6IRoUBzGzrkp84sI5KXdxL5plTuWQg3uc',
             type: 'featured'
         },
         {
-            title: 'Healthcare Data Pipeline',
-            description: 'Robust ETL pipeline processing sensitive medical data with Kafka and Spark for real-time monitoring.',
-            fullDetail: 'A high-throughput data infrastructure designed for HIPAA compliance, featuring automated data masking and schema validation.',
-            performance: 'Ingested 500GB of daily clinical data with zero downtime and 99.9% data integrity.',
-            tech: ['Kafka', 'Spark', 'PostgreSQL', 'Docker'],
-            image: 'https://images.unsplash.com/photo-1576091160550-2173bdb999ef?q=80&w=2670&auto=format&fit=crop',
+            title: '🚀 A/B Testing using Hypothesis Testing ',
+            description: ' To check if the Treatment group leads to a higher conversion rate than the Control group using statistical hypothesis testing.',
+            fullDetail: 'To check if the Treatment group leads to a higher conversion rate than the Control group using statistical hypothesis testing.📌 Dataset Structuregroup → control / treatmentconverted → 0 (not converted) / 1 (converted)🔍 Steps Performed✅ Data Cleaning & Exploration ✅ Group-wise conversion rate calculation ✅ Hypothesis Setup:H0: Conversion rate(Control) = Conversion rate(Treatment)H1: Conversion rate(Treatment) > Conversion rate(Control)✅ Applied Z-Test for Proportions ✅ Checked statistical significance using p-value ✅ Final business decision based on results📊 Results📌 Z-Statistic: 1.23 📌 P-Value: 0.216Since p-value > 0.05, the result is not statistically significant, meaning:',
+            performance: 'Achieved clear cluster separation, with ~80% revenue driven by top 20–30% customers.',
+            tech: ['kaggle', 'Z-test', 'A/B Testing', 'Hypothesis Testing', 'Python', 'Pandas', 'Numpy'],
+            image: jj,
             github: '#',
-            demo: '#',
+            demo: 'https://www.linkedin.com/posts/sachin-rawatb_datascience-aabrbabrtesting-hypothesistesting-activity-7429864770364919808-i1MM?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6IRoUBzGzrkp84sI5KXdxL5plTuWQg3uc',
             type: 'featured'
         },
         {
-            title: 'Fraud Detection System',
-            description: 'Real-time financial transaction monitoring using anomaly detection algorithms to prevent credit card fraud.',
-            fullDetail: 'An ensemble learning framework that detects suspicious patterns in milliseconds, reducing false positives through behavioral analysis.',
-            performance: 'Detected $2.4M in potential fraudulent transactions with 94% precision and 1:5000 false positive rate.',
-            tech: ['Python', 'H2O.ai', 'Kubernetes', 'MongoDB'],
-            image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2670&auto=format&fit=crop',
-            github: '#',
-            demo: '#',
+            title: 'Customer Segmentation using RFM Analysis ',
+            description: 'his project shows how Machine Learning + RFM analytics can help businesses take smarter decisions in:📌 Marketing📌 Customer retention📌 Revenue optimization📌 Sales strategy',
+            fullDetail: 'I recently completed a Customer Segmentation project using RFM Analysis on the Superstore dataset from Kaggle. I engineered Recency, Frequency, and Monetary features, applied data scaling, and performed K-Means clustering to identify high-value, at-risk, and churned customers. Using PCA for validation and Pareto (80/20) analysis, I discovered that a small percentage of customers were contributing the majority of revenue — with a significant portion coming from customers who are now at risk. This project highlights how Machine Learning + Business Analytics can drive smarter decisions in customer retention, targeted marketing, and revenue optimization.',
+            performance: 'Achieved clear cluster separation, with ~80% revenue driven by top 20–30% customers.',
+            tech: ['Python', 'Pandas', 'Scikit-learn', 'Matplotlib', 'RFM', 'KMeans', 'PCA', 'StandardScaler'],
+            image: hh,
+            github: 'https://github.com/sachinrawat6264384464/Machine-Learning-Projects-Bigner-To-Advanced-Journey-Start-/blob/main/machine%20learning%20practice%20projects/sample-superstore.ipynb',
+            demo: 'https://www.linkedin.com/posts/sachin-rawatb_machinelearning-datascience-customersegmentation-activity-7429506003513069568-fqkb?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6IRoUBzGzrkp84sI5KXdxL5plTuWQg3uc',
             type: 'featured'
         },
         {
-            title: 'Customer Churn Predictor',
-            description: 'An end-to-end ML solution for telecom companies to identify at-risk customers with 92% precision.',
-            fullDetail: 'A classification system utilizing deep neural networks to analyze usage patterns and predict high-risk churn windows.',
-            performance: 'Enabled target retention campaigns that reduced churn by 18% in the first quarter.',
-            tech: ['XGBoost', 'Pandas', 'Flask', 'PowerBI'],
-            image: 'https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=2670&auto=format&fit=crop',
-            github: '#',
-            demo: '#',
+            title: 'Credit Card Customer Segmentation',
+            description: 'I recently completed a Credit Card Customer Segmentation project using K-Means clustering, ',
+            fullDetail: '🚀 I recently completed a Credit Card Customer Segmentation project using K-Means clustering, where I analyzed customer behavior to generate actionable business insights. After data cleaning and feature scaling, I determined the optimal clusters using Elbow Method and Silhouette Score, followed by PCA visualization for validation.',
+            performance: 'Achieved well-separated clusters with a strong Silhouette Score, indicating effective and meaningful customer segmentation.',
+            tech: ['PCA Visualization', 'K-Means', 'Pandas', 'Matplotlib'],
+            image: dd,
+            github: 'https://github.com/sachinrawat6264384464/Machine-Learning-Projects-Bigner-To-Advanced-Journey-Start-/blob/main/machine%20learning%20practice%20projects/credit%20card%20segmentation.ipynb',
+            demo: 'https://www.linkedin.com/posts/sachin-rawatb_machinelearning-datascience-kmeans-activity-7428389069602209792-0HkZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6IRoUBzGzrkp84sI5KXdxL5plTuWQg3uc',
             type: 'featured'
         },
         {
-            title: 'Object Detection Bot',
-            description: 'Computer Vision model deployed on edge devices for automated security surveillance in industrial zones.',
-            fullDetail: 'Optimized YOLO architecture specifically designed for low-power edge deployment, featuring custom object tracking logic.',
-            performance: 'Achieved 30 FPS on embedded devices with 95% mAP (mean Average Precision).',
-            tech: ['YOLOv8', 'OpenCV', 'TensorRT', 'C++'],
-            image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop',
-            github: '#',
-            demo: '#',
+            title: 'Iris Flower Segmentation ',
+            description: 'I recently completed an Unsupervised Learning project on Iris Flower Segmentation using K-Means clustering on the famous Iris dataset. ',
+            fullDetail: '🚀 I recently completed an Unsupervised Learning project on Iris Flower Segmentation using K-Means clustering on the famous Iris dataset. Without using labels during training, I performed feature selection, scaling, optimal K selection (Elbow Method), and evaluated clusters using Silhouette Score. The results showed better separation using petal features (0.67) compared to all features (0.47), .',
+            performance: 'Achieved a strong Silhouette Score of 0.67 with clear cluster separation, validating effective unsupervised segmentation.',
+            tech: ['K-Means', 'Pandas', 'Matplotlib'],
+            image: nn,
+            github: 'https://github.com/sachinrawat6264384464/Machine-Learning-Projects-Bigner-To-Advanced-Journey-Start-/blob/main/machine%20learning%20practice%20projects/Iris%20Flower%20Clustering.ipynb',
+            demo: 'https://www.linkedin.com/posts/sachin-rawatb_machinelearning-unsupervisedlearning-kmeans-activity-7428249128024952833-N2T_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6IRoUBzGzrkp84sI5KXdxL5plTuWQg3uc',
             type: 'featured'
         },
     ];
 
     const miniProjects = [
         {
-            title: 'Movie Recommendation Sys',
-            shortDesc: 'A sleek content-based filter using cosine similarity.',
-            fullDetail: 'A personalized movie recommendation system built using Python and Scikit-learn. It analyzes 5,000+ movie datasets to suggest titles based on genres and user preferences using TF-IDF Vectorizer.',
-            tech: ['Python', 'Pandas', 'Streamlit'],
-            image: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2659&auto=format&fit=crop',
+            title: 'Student Habits vs Academic Performance Prediction (Machine Learning Project)',
+            shortDesc: 'I analyzed how student lifestyle habits impact academic performance',
+            fullDetail: 'In this project, I analyzed how student lifestyle habits impact academic performance and built a Linear Regression model to predict exam scores. After proper data preprocessing (cleaning, encoding, and outlier removal), the model achieved an R² score of 0.90, explaining 90% of the variance in performance. The low MSE, MAE, and RMSE values indicate strong prediction accuracy. This project helped me implement the complete machine learning pipeline from data preparation to model evaluation ',
+            tech: ['Python', 'Pandas', 'Linear Regression', 'Scikit-learn', 'Matplotlib'],
+            image: student,
             type: 'mini'
         },
         {
-            title: 'Stock Price Tracker',
-            shortDesc: 'Real-time visualization of market trends using Yahoo Finance API.',
-            fullDetail: 'A dynamic dashboard that fetches live stock price data using the yfinance library. It features interactive Plotly charts and technical indicators like Moving Averages for quick market analysis.',
-            tech: ['Python', 'Plotly', 'YFinance'],
-            image: 'https://images.unsplash.com/photo-1611974717535-7dd0c11432f4?q=80&w=2670&auto=format&fit=crop',
+            title: '🚀 Sales Prediction using Machine Learning (Regression Project) 📊',
+            shortDesc: 'I used machine learning algorithms to predict future sales based on historical data.',
+            fullDetail: 'In this project, I predicted sales based on advertising spend across TV, Radio, Social Media, and Influencer categories. I performed data preprocessing, encoded categorical features, and trained multiple regression models including Decision Tree, Random Forest, XGBoost, and Gradient Boosting. After evaluating models using MAE, RMSE, and R² Score, Gradient Boosting performed the best with an R² of 0.9989. This project demonstrates how machine learning can support marketing budget optimization and business decision-making 🚀📊',
+            tech: ['Python', 'Pandas', 'xgboost', 'RandomForestRegressor', 'decisionTreeRegressor', 'gradientBoostingRegressor', 'Scikit-learn', 'Matplotlib'],
+            image: sales,
             type: 'mini'
         },
         {
-            title: 'Iris Flower Classifier',
-            shortDesc: 'Classic ML project identifying species with KNN.',
-            fullDetail: 'The "Hello World" of Machine Learning. A KNN classifier that distinguishes between Iris Setosa, Versicolor, and Virginica species based on sepal and petal measurements with 98.5% accuracy.',
-            tech: ['Sklearn', 'Matplotlib', 'Numpy'],
-            image: 'https://images.unsplash.com/photo-1599305445671-ac291c95ada9?q=80&w=2669&auto=format&fit=crop',
+            title: 'Sonar Rock vs Mine Prediction',
+            shortDesc: 'I built a Sonar Rock vs Mine classification system using a Random Forest classifier',
+            fullDetail: 'In this project, I built a Sonar Rock vs Mine classification system using a Random Forest classifier to detect whether a sonar signal represents a rock or a mine. I performed data preprocessing and feature scaling, then trained and evaluated the model using accuracy, recall, and a confusion matrix. The model achieved 85.71% accuracy with a strong recall score of 82.14%, which is crucial since missing a mine can be dangerous.',
+            tech: ['Sklearn', 'Matplotlib', 'pandas', 'Randomforestclassifier'],
+            image: solar,
             type: 'mini'
         }
     ];
@@ -203,6 +212,7 @@ const Projects = () => {
                                 </div>
                                 <h4 className="text-xl font-black text-white mb-2 group-hover:text-brown-light transition-colors">{mini.title}</h4>
                                 <p className="text-slate-400 text-sm mb-6 line-clamp-2 font-medium">{mini.shortDesc}</p>
+
                                 <button
                                     onClick={() => setSelectedProject(mini)}
                                     className="w-full py-3 bg-brown/10 text-brown-light rounded-xl text-sm font-black border border-brown/20 hover:bg-brown hover:text-white transition-all"
@@ -234,6 +244,14 @@ const Projects = () => {
                             >
                                 See Full GitHub <ArrowRight size={16} />
                             </a>
+                            <a
+                                href="https://www.linkedin.com/in/sachin-rawatb"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 text-brown-light font-black text-sm group-hover:translate-x-1 transition-all"
+                            >
+                                See LinkedIn <ArrowRight size={16} />
+                            </a>
                         </motion.div>
                     </div>
                 </div>
@@ -242,76 +260,87 @@ const Projects = () => {
             {/* Project Modal Popup */}
             <AnimatePresence>
                 {selectedProject && (
-                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-5">
+                        {/* Backdrop */}
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setSelectedProject(null)}
-                            className="absolute inset-0 bg-slate-900/90 backdrop-blur-xl"
+                            className="fixed inset-0 bg-black/70 backdrop-blur-md"
                         ></motion.div>
 
+                        {/* Modal Box */}
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                            initial={{ opacity: 0, scale: 0.9, y: 30 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-                            className={`relative w-full ${selectedProject.type === 'featured' ? 'max-w-xl' : 'max-w-2xl'} bg-slate-900 border border-white/10 rounded-[2.5rem] shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden z-[101]`}
+                            exit={{ opacity: 0, scale: 0.9, y: 30 }}
+                            transition={{ type: 'spring', duration: 0.4 }}
+                            className="relative w-full max-w-3xl bg-slate-900 border border-white/10 rounded-3xl shadow-[0_0_60px_rgba(0,0,0,0.6)] z-[101] overflow-hidden flex flex-col sm:flex-row max-h-[90vh]"
                         >
+                            {/* Close Button */}
                             <button
                                 onClick={() => setSelectedProject(null)}
-                                className="absolute top-6 right-6 p-2 bg-white/5 hover:bg-brown/20 text-white hover:text-brown-light rounded-full transition-all z-10"
+                                className="absolute top-3 right-3 z-20 p-2 bg-black/50 hover:bg-brown/60 text-white rounded-full transition-all backdrop-blur-sm"
                             >
-                                <X size={24} />
+                                <X size={18} />
                             </button>
 
-                            <div className="flex flex-col md:flex-row h-full">
-                                {selectedProject.type === 'mini' && (
-                                    <div className="w-full md:w-1/2 aspect-square">
-                                        <img
-                                            src={selectedProject.image}
-                                            alt={selectedProject.title}
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </div>
-                                )}
-                                <div className="flex-1 p-8 md:p-10 flex flex-col justify-center">
-                                    <div className="flex items-center gap-2 text-brown-light mb-4">
-                                        <Sparkles size={18} />
-                                        <span className="text-xs font-black uppercase tracking-[0.2em]">Project Insights</span>
-                                    </div>
-                                    <h3 className="text-3xl font-black text-white mb-6 leading-tight">
-                                        {selectedProject.title}
-                                    </h3>
+                            {/* LEFT — Image Panel */}
+                            {selectedProject.image && (
+                                <div className="w-full sm:w-2/5 h-52 sm:h-auto flex-shrink-0 relative">
+                                    <img
+                                        src={selectedProject.image}
+                                        alt={selectedProject.title}
+                                        className="w-full h-full object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-slate-900/60 to-transparent" />
+                                </div>
+                            )}
 
-                                    <div className="space-y-6 mb-8">
+                            {/* RIGHT — Scrollable Content */}
+                            <div className="flex-1 overflow-y-auto p-5 sm:p-7 flex flex-col">
+                                <div className="flex items-center gap-2 text-brown-light mb-2">
+                                    <Sparkles size={14} />
+                                    <span className="text-[10px] font-black uppercase tracking-[0.2em]">Project Insights</span>
+                                </div>
+
+                                <h3 className="text-xl sm:text-2xl font-black text-white mb-4 leading-tight pr-6">
+                                    {selectedProject.title}
+                                </h3>
+
+                                <div className="space-y-4 mb-5">
+                                    <div>
+                                        <p className="text-brown-light text-[9px] font-black uppercase tracking-widest mb-1.5 opacity-70">Description</p>
+                                        <p className="text-slate-300 text-sm leading-relaxed font-medium">
+                                            {selectedProject.fullDetail || selectedProject.description}
+                                        </p>
+                                    </div>
+
+                                    {selectedProject.performance && (
                                         <div>
-                                            <p className="text-brown-light text-[10px] font-black uppercase tracking-widest mb-1.5 opacity-60">Description</p>
-                                            <p className="text-slate-300 text-base leading-relaxed font-medium">
-                                                {selectedProject.fullDetail || selectedProject.description}
+                                            <p className="text-brown-light text-[9px] font-black uppercase tracking-widest mb-1.5 opacity-70">Impact & Performance</p>
+                                            <p className="text-slate-200 text-sm font-black leading-relaxed italic border-l-2 border-brown pl-3">
+                                                &ldquo;{selectedProject.performance}&rdquo;
                                             </p>
                                         </div>
+                                    )}
+                                </div>
 
-                                        {selectedProject.performance && (
-                                            <div>
-                                                <p className="text-brown-light text-[10px] font-black uppercase tracking-widest mb-1.5 opacity-60">Impact & Performance</p>
-                                                <p className="text-slate-200 text-base font-black leading-relaxed italic border-l-2 border-brown pl-4">
-                                                    "{selectedProject.performance}"
-                                                </p>
-                                            </div>
-                                        )}
-                                    </div>
+                                {/* Tech Badges */}
+                                <div className="flex flex-wrap gap-1.5 mb-5">
+                                    {selectedProject.tech.map(t => (
+                                        <span key={t} className="px-2.5 py-1 bg-brown/10 text-brown-light rounded-lg text-[11px] font-black border border-brown/20">
+                                            {t}
+                                        </span>
+                                    ))}
+                                </div>
 
-                                    <div className="flex flex-wrap gap-2 mb-10">
-                                        {selectedProject.tech.map(t => (
-                                            <span key={t} className="px-4 py-2 bg-brown/10 text-brown-light rounded-xl text-xs font-black border border-brown/20 transition-all">
-                                                {t}
-                                            </span>
-                                        ))}
-                                    </div>
-
+                                {/* Back Button */}
+                                <div className="mt-auto pt-2">
                                     <button
                                         onClick={() => setSelectedProject(null)}
-                                        className="w-full py-4 bg-brown text-white rounded-2xl font-black shadow-lg shadow-brown/20 hover:shadow-brown/40 transition-all active:scale-[0.98]"
+                                        className="w-full py-3 bg-brown text-white rounded-2xl font-black shadow-lg shadow-brown/20 hover:shadow-brown/40 transition-all active:scale-[0.98] text-sm"
                                     >
                                         Back to Projects
                                     </button>

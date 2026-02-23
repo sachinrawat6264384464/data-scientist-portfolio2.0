@@ -34,7 +34,15 @@ const About = () => {
                         <div className="aspect-square rounded-3xl bg-white/5 overflow-hidden shadow-[0_0_30px_rgba(169,132,103,0.3)] border border-brown/50 p-4 backdrop-blur-md">
                             <div className="w-full h-full rounded-2xl bg-gradient-to-br from-slate-900 to-brown/10 flex items-center justify-center p-8 border border-white/5">
                                 <p className="text-slate-300 italic text-center font-medium">
-                                    "Data is a precious thing and will last longer than the systems themselves."
+                                    " 🔥 CORE COMPETENCIES<br></br>
+                                    Machine Learning & Predictive Modeling,
+                                    Ensemble & Boosting Algorithms,
+                                    End-to-End ML Pipeline Development,
+                                    Feature Engineering & Data Cleaning,
+                                    Model Evaluation & Optimization,
+                                    REST API & ML Model Deployment,
+                                    Customer Segmentation & Business Analytics
+                                    "
                                 </p>
                             </div>
                         </div>
