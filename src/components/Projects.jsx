@@ -10,6 +10,10 @@ import nn from './nn.png';
 import student from './student.jpg';
 import sales from './sales.jpg';
 import solar from './solar.jpg';
+import re from './port.jpg';
+import sipl from './sipl.jpg';
+import acro from './las.jpg';
+import django from './django1.jpg';
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -83,6 +87,52 @@ const Projects = () => {
         },
     ];
 
+    const webProjects = [
+        {
+            title: 'Personal Portfolio Website – ML & Full Stack Developer',
+
+            description: 'A modern, responsive portfolio website showcasing my expertise in Machine Learning, Data Science, and Full Stack Development using Django and React.',
+
+            fullDetail: 'Designed and developed a fully responsive personal portfolio to highlight my end-to-end projects in Machine Learning, Data Science, and Web Development. The website features dynamic project sections, smooth UI interactions, and structured content presentation. Implemented clean component-based architecture, optimized performance, and ensured cross-device compatibility. The portfolio includes detailed project case studies such as ML predictive models, data analysis dashboards, and full-stack applications built with React and Django.',
+            performance: 'Achieved 95+ score on Lighthouse for Performance, Accessibility, and SEO.',
+            tech: ['React', 'Tailwind CSS', 'EmailJS'],
+            image: re,
+            github: 'https://github.com/sachinrawat6264384464/data-scientist-portfolio2.0',
+
+            type: 'featured'
+        },
+        {
+            title: 'Full Stack Stock Management System',
+
+            description: 'A complete end-to-end stock management system built using React and Django to handle inventory tracking, product management, and real-time stock updates.',
+
+            fullDetail: 'Developed a full-stack inventory management application with React frontend and Django REST backend. Implemented product CRUD operations, stock quantity tracking, authentication system, API integration, and dynamic dashboard. Designed a responsive UI with reusable React components and connected it with Django REST APIs for seamless data flow. Integrated MySQL for persistent data storage and ensured secure backend handling.',
+
+            performance: 'Improved inventory tracking efficiency by automating stock updates and reducing manual errors. Optimized API calls and frontend rendering for faster dashboard performance and smooth user experience.',
+
+            tech: ['React.js', 'Django', 'Django REST Framework', 'MySQL', 'JavaScript', 'HTML', 'tailwindCSS', 'REST API'],
+            image: django,
+            github: 'https://github.com/sachinrawat6264384464/Stock_Manager',
+
+            type: 'featured'
+        },
+        {
+            title: 'Full Stack Library Management System',
+
+            description: 'A complete Django-based library management system with integrated frontend, backend, and database handling for efficient book and user management.',
+
+            fullDetail: 'Developed a fully functional library management system using Django, implementing both frontend and backend within a single framework. The system includes book management (add, update, delete), member registration, issue/return tracking, fine calculation logic, and admin control panel. Integrated MySQL for persistent data storage and implemented authentication with role-based access control. Designed responsive templates using HTML, CSS, and Django Template Engine to ensure smooth user interaction.',
+
+            performance: 'Streamlined book issuing and return workflows, reducing manual record-keeping efforts and improving operational efficiency. Optimized database queries and backend logic for faster response time and scalable performance.',
+
+            tech: ['Django', 'Python', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'Django ORM', 'Authentication System'],
+            image: acro,
+            github: 'https://github.com/sachinrawat6264384464/Lakshya-library-mz3c',
+
+            type: 'featured'
+        }
+    ];
+
     const miniProjects = [
         {
             title: 'Student Habits vs Academic Performance Prediction (Machine Learning Project)',
@@ -151,10 +201,10 @@ const Projects = () => {
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-brown/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
-                                    <a href={project.github} className="p-3 bg-white/5 border border-white/20 rounded-full text-white hover:bg-brown hover:text-white transition-all transform scale-90 group-hover:scale-100 backdrop-blur-md">
+                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/20 rounded-full text-white hover:bg-brown hover:text-white transition-all transform scale-90 group-hover:scale-100 backdrop-blur-md">
                                         <Github size={20} />
                                     </a>
-                                    <a href={project.demo} className="p-3 bg-white/5 border border-white/20 rounded-full text-white hover:bg-brown hover:text-white transition-all transform scale-90 delay-75 group-hover:scale-100 backdrop-blur-md">
+                                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/20 rounded-full text-white hover:bg-brown hover:text-white transition-all transform scale-90 delay-75 group-hover:scale-100 backdrop-blur-md">
                                         <ExternalLink size={20} />
                                     </a>
                                 </div>
@@ -174,9 +224,9 @@ const Projects = () => {
                                 </p>
                                 <button
                                     onClick={() => setSelectedProject(project)}
-                                    className="inline-flex items-center gap-2 text-brown-light font-black text-sm hover:text-brown transition-all group/link"
+                                    className="w-full py-3 bg-brown/10 text-brown-light rounded-xl text-sm font-black border border-brown/20 hover:bg-brown hover:text-white transition-all"
                                 >
-                                    View Details <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
+                                    View Details
                                 </button>
                             </div>
                         </motion.div>
@@ -253,6 +303,72 @@ const Projects = () => {
                                 See LinkedIn <ArrowRight size={16} />
                             </a>
                         </motion.div>
+                    </div>
+                </div>
+
+                {/* Web Development Section - MOVED & STYLED DIFFERENTLY */}
+                <div className="pt-24 border-t border-white/5 mt-24">
+                    <div className="flex border-b border-white/10 pb-6 mb-16 items-center justify-between">
+                        <div>
+                            <motion.h2
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="text-4xl font-black text-white flex items-center gap-3"
+                            >
+                                <Box className="text-brown-light" /> Web Apps & Dev
+                            </motion.h2>
+                            <p className="text-slate-400 mt-2 font-medium tracking-wide">Full-stack solutions and responsive web experiences.</p>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {webProjects.map((project, index) => (
+                            <motion.div
+                                key={project.title}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="group bg-white/5 rounded-3xl overflow-hidden hover:shadow-[0_0_30px_rgba(169,132,103,0.3)] border border-brown/50 hover:border-brown-light transition-all duration-300 backdrop-blur-md"
+                            >
+                                <div className="relative aspect-video overflow-hidden">
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                    <div className="absolute inset-0 bg-brown/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/20 rounded-full text-white hover:bg-brown hover:text-white transition-all transform scale-90 group-hover:scale-100 backdrop-blur-md">
+                                            <Github size={20} />
+                                        </a>
+                                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/20 rounded-full text-white hover:bg-brown hover:text-white transition-all transform scale-90 delay-75 group-hover:scale-100 backdrop-blur-md">
+                                            <ExternalLink size={20} />
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="p-8">
+                                    <div className="flex flex-wrap gap-2 mb-4">
+                                        {project.tech.map((t) => (
+                                            <span key={t} className="px-2.5 py-1 bg-white/5 text-slate-200 rounded-lg text-xs font-black uppercase border border-white/10 hover:border-light-purple/40 transition-all">
+                                                {t}
+                                            </span>
+                                        ))}
+                                    </div>
+                                    <h3 className="text-2xl font-black text-white mb-3 group-hover:text-brown-light transition-colors">{project.title}</h3>
+                                    <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-6 font-medium line-clamp-2">
+                                        {project.description}
+                                    </p>
+                                    <button
+                                        onClick={() => setSelectedProject(project)}
+                                        className="w-full py-3 bg-brown/10 text-brown-light rounded-xl text-sm font-black border border-brown/20 hover:bg-brown hover:text-white transition-all"
+                                    >
+                                        View Details
+                                    </button>
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </div>
