@@ -369,6 +369,39 @@ const Projects = () => {
                                 </div>
                             </motion.div>
                         ))}
+
+                        {/* View All Card */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            className="bg-gradient-to-br from-brown-dark/20 to-brown-light/20 p-6 rounded-3xl border border-brown/50 flex flex-col items-center justify-center text-center space-y-4 hover:shadow-[0_0_40px_rgba(169,132,103,0.4)] transition-all cursor-pointer group"
+                        >
+                            <div className="p-4 bg-white/10 rounded-full border border-white/10 group-hover:scale-110 transition-transform">
+                                <Trophy className="text-brown-light" size={32} />
+                            </div>
+                            <div>
+                                <h4 className="text-2xl font-black text-white">25+ Projects</h4>
+                                <p className="text-slate-200 text-sm font-bold uppercase tracking-widest mt-1">Explored & Built</p>
+                            </div>
+                            <a
+                                href="https://github.com/sachinrawat6264384464"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 text-brown-light font-black text-sm group-hover:translate-x-1 transition-all"
+                            >
+                                See Full GitHub <ArrowRight size={16} />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/sachin-rawatb"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 text-brown-light font-black text-sm group-hover:translate-x-1 transition-all"
+                            >
+                                See LinkedIn <ArrowRight size={16} />
+                            </a>
+                        </motion.div>
+
                     </div>
                 </div>
             </div>
@@ -463,6 +496,38 @@ const Projects = () => {
                                 </div>
                             </div>
                         </motion.div>
+                        {/* View All Card */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            className="bg-gradient-to-br from-brown-dark/20 to-brown-light/20 p-6 rounded-3xl border border-brown/50 flex flex-col items-center justify-center text-center space-y-4 hover:shadow-[0_0_40px_rgba(169,132,103,0.4)] transition-all cursor-pointer group"
+                        >
+                            <div className="p-4 bg-white/10 rounded-full border border-white/10 group-hover:scale-110 transition-transform">
+                                <Trophy className="text-brown-light" size={32} />
+                            </div>
+                            <div>
+                                <h4 className="text-2xl font-black text-white">25+ Projects</h4>
+                                <p className="text-slate-200 text-sm font-bold uppercase tracking-widest mt-1">Explored & Built</p>
+                            </div>
+                            <a
+                                href="https://github.com/sachinrawat6264384464"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 text-brown-light font-black text-sm group-hover:translate-x-1 transition-all"
+                            >
+                                See Full GitHub <ArrowRight size={16} />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/sachin-rawatb"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 text-brown-light font-black text-sm group-hover:translate-x-1 transition-all"
+                            >
+                                See LinkedIn <ArrowRight size={16} />
+                            </a>
+                        </motion.div>
+
                     </div>
                 )}
             </AnimatePresence>
