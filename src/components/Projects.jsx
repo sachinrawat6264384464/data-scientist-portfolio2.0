@@ -98,7 +98,7 @@ const Projects = () => {
             tech: ['React', 'Tailwind CSS', 'EmailJS'],
             image: re,
             github: 'https://github.com/sachinrawat6264384464/data-scientist-portfolio2.0',
-
+            demo: 'https://sachin-r-portfolio.netlify.app/',
             type: 'featured'
         },
         {
