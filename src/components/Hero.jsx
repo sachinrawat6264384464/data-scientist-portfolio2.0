@@ -130,7 +130,7 @@ const Hero = () => {
                                     {/* Download Button */}
                                     <a
                                         href={resumeImg}
-                                        download="SACHIN RAWAT resume (1).pdf"
+                                        download="SACHIN resume.pdf"
                                         className="flex items-center gap-2 px-4 py-2 bg-brown hover:bg-brown-light text-white rounded-xl text-sm font-black transition-all hover:shadow-[0_0_15px_rgba(169,132,103,0.4)]"
                                     >
                                         <Download size={16} /> Download Resume
@@ -193,7 +193,7 @@ const Hero = () => {
 
                                     <a
                                         href={resumeImg}
-                                        download="SACHIN RAWAT resume (1).pdf"
+                                        download="SACHIN resume.pdf"
                                         className="flex items-center gap-2 px-4 py-2 bg-brown hover:bg-brown-light text-white rounded-xl text-sm font-black transition-all hover:shadow-[0_0_15px_rgba(169,132,103,0.4)]"
                                     >
                                         <Download size={16} /> Download Resume
@@ -213,7 +213,7 @@ const Hero = () => {
                                 {resumeImgSrc ? (
                                     <img
                                         src={resumeImgSrc}
-                                        alt="Sachin Rawat Resume"
+                                        alt="Sachin Rawat Resu"
                                         className="w-full object-contain"
                                     />
                                 ) : (
