@@ -4,6 +4,7 @@ import { Github, Linkedin, Download, X, FileText, Eye } from 'lucide-react';
 import profileImg from './myimage.jpg';
 import resume from './re.jpg';
 import dd from './SACHIN resume.pdf';
+import CapShieldDecorative from './CapShieldDecorative.jsx';
 
 // ✅ STEP 1: Apni resume image yahan rename karke 'resumeImg.jpg' rakho
 //            Location: src/components/resumeImg.jpg
@@ -24,8 +25,31 @@ const Hero = () => {
     const resumeUrl_local = './SACHIN resume.pdf';
 
     return (
-        <section id="home" className="min-h-screen pt-32 pb-16 flex items-center bg-slate-900 text-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="home" className="relative min-h-screen pt-32 pb-16 flex items-center bg-slate-900 text-white overflow-hidden">
+            {/* Decorative Stars - High Density */}
+            <CapShieldDecorative size={180} className="absolute -top-20 -left-20 opacity-[0.03]" />
+            <CapShieldDecorative size={300} className="absolute top-[10%] -right-32 opacity-[0.02] rotate-12" />
+            <CapShieldDecorative size={120} className="absolute top-[20%] right-[10%] opacity-[0.04]" />
+            <CapShieldDecorative size={150} className="absolute bottom-10 left-[15%] opacity-[0.03]" />
+            <CapShieldDecorative size={80} className="absolute top-[40%] left-[5%] opacity-[0.05] -rotate-12" />
+            <CapShieldDecorative size={220} className="absolute bottom-[20%] right-[5%] opacity-[0.02] rotate-45" />
+            <CapShieldDecorative size={60} className="absolute top-[15%] left-[45%] opacity-[0.03]" />
+            <CapShieldDecorative size={100} className="absolute bottom-[40%] left-[40%] opacity-[0.015]" />
+            <CapShieldDecorative size={140} className="absolute top-[60%] right-[30%] opacity-[0.02]" />
+            <CapShieldDecorative size={90} className="absolute bottom-[10%] right-[40%] opacity-[0.04] rotate-180" />
+            {/* Added 10 more for extreme density */}
+            <CapShieldDecorative size={250} className="absolute top-[60%] -left-20 opacity-[0.01] rotate-90" />
+            <CapShieldDecorative size={70} className="absolute top-[5%] right-[25%] opacity-[0.04]" />
+            <CapShieldDecorative size={130} className="absolute bottom-[30%] left-[2%] opacity-[0.02] -rotate-12" />
+            <CapShieldDecorative size={50} className="absolute top-[50%] right-[15%] opacity-[0.05]" />
+            <CapShieldDecorative size={320} className="absolute bottom-[-10%] right-[10%] opacity-[0.015] rotate-45" />
+            <CapShieldDecorative size={110} className="absolute top-[35%] right-[45%] opacity-[0.02]" />
+            <CapShieldDecorative size={40} className="absolute bottom-[60%] left-[25%] opacity-[0.03]" />
+            <CapShieldDecorative size={190} className="absolute top-[80%] right-[20%] opacity-[0.015]" />
+            <CapShieldDecorative size={85} className="absolute bottom-[15%] left-[50%] opacity-[0.025] rotate-180" />
+            <CapShieldDecorative size={160} className="absolute top-[10%] left-[20%] opacity-[0.01] -rotate-45" />
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}

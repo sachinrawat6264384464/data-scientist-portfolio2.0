@@ -7,6 +7,7 @@ import Experience from './components/Experience.jsx';
 import Projects from './components/Projects.jsx';
 import Certificates from './components/Certificates.jsx';
 import Education from './components/Education.jsx';
+import Extracurricular from './components/Extracurricular.jsx';
 import Contact from './components/Contact.jsx';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Projects />
         <Certificates />
         <Education />
+        <Extracurricular />
         <Contact />
       </main>
 

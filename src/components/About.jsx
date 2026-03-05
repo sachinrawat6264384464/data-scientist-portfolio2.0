@@ -1,11 +1,35 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github } from 'lucide-react';
+import CharacterBanner, { HulkSVG } from './CharacterBanner.jsx';
+import CapShieldDecorative from './CapShieldDecorative.jsx';
 
 const About = () => {
     return (
-        <section id="about" className="py-24 bg-slate-900 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="about" className="relative py-24 bg-slate-900 overflow-hidden">
+            {/* Decorative Stars - High Density */}
+            <CapShieldDecorative size={160} className="absolute top-10 -right-20 opacity-[0.03] rotate-12" />
+            <CapShieldDecorative size={100} className="absolute bottom-[20%] -left-10 opacity-[0.04] -rotate-12" />
+            <CapShieldDecorative size={140} className="absolute top-[60%] right-[15%] opacity-[0.02] rotate-45" />
+            <CapShieldDecorative size={200} className="absolute -bottom-20 -right-20 opacity-[0.015]" />
+            <CapShieldDecorative size={70} className="absolute top-[30%] left-[10%] opacity-[0.03] rotate-90" />
+            <CapShieldDecorative size={110} className="absolute bottom-[40%] right-[5%] opacity-[0.02] -rotate-45" />
+            <CapShieldDecorative size={50} className="absolute top-[10%] left-[40%] opacity-[0.04]" />
+            <CapShieldDecorative size={180} className="absolute bottom-[10%] left-[20%] opacity-[0.01]" />
+            <CapShieldDecorative size={90} className="absolute top-[70%] left-[2%] opacity-[0.025]" />
+            {/* Added 10 more for extreme density */}
+            <CapShieldDecorative size={240} className="absolute -top-10 -left-10 opacity-[0.01] rotate-12" />
+            <CapShieldDecorative size={60} className="absolute top-[15%] right-[30%] opacity-[0.035]" />
+            <CapShieldDecorative size={130} className="absolute bottom-[5%] right-[25%] opacity-[0.02]" />
+            <CapShieldDecorative size={40} className="absolute top-[45%] left-[25%] opacity-[0.05]" />
+            <CapShieldDecorative size={300} className="absolute top-[10%] left-[60%] opacity-[0.008] -rotate-90" />
+            <CapShieldDecorative size={110} className="absolute bottom-[15%] left-[5%] opacity-[0.025] rotate-180" />
+            <CapShieldDecorative size={80} className="absolute top-[80%] right-[10%] opacity-[0.04]" />
+            <CapShieldDecorative size={150} className="absolute top-[25%] right-[45%] opacity-[0.015]" />
+            <CapShieldDecorative size={55} className="absolute bottom-[35%] left-[45%] opacity-[0.03]" />
+            <CapShieldDecorative size={190} className="absolute top-[50%] left-[5%] opacity-[0.01] rotate-45" />
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -13,13 +37,24 @@ const About = () => {
                         viewport={{ once: true }}
                         className="text-4xl font-black text-white md:text-5xl"
                     >
+                        {/* Avengers Character Banner */}
+                        <div className="mt-10">
+                            <CharacterBanner
+                                name="Hulk"
+                                alias="Sachin Rawat"
+                                quote="That's my secret — I'm always Learning and Improving."
+                                color="#22C55E"
+                                icon={HulkSVG}
+                                align="right"
+                            />
+                        </div>
                         About Me
                     </motion.h2>
                     <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: "80px" }}
                         viewport={{ once: true }}
-                        className="h-1.5 bg-brown mx-auto mt-4 rounded-full"
+                        className="h-1.5 bg-green-500 mt-4 rounded-full"
                     ></motion.div>
                 </div>
 
@@ -31,8 +66,8 @@ const About = () => {
                         transition={{ duration: 0.6 }}
                         className="relative"
                     >
-                        <div className="aspect-square rounded-3xl bg-white/5 overflow-hidden shadow-[0_0_30px_rgba(169,132,103,0.3)] border border-brown/50 p-4 backdrop-blur-md">
-                            <div className="w-full h-full rounded-2xl bg-gradient-to-br from-slate-900 to-brown/10 flex items-center justify-center p-8 border border-white/5">
+                        <div className="aspect-square rounded-3xl bg-white/5 overflow-hidden shadow-[0_0_30px_rgba(34,197,94,0.3)] border border-green-500/50 p-4 backdrop-blur-md">
+                            <div className="w-full h-full rounded-2xl bg-gradient-to-br from-slate-900 to-green-500/10 flex items-center justify-center p-8 border border-white/5">
                                 <p className="text-slate-300 italic text-center font-medium">
                                     " 🔥 CORE COMPETENCIES<br></br>
                                     Machine Learning & Predictive Modeling,
@@ -73,11 +108,11 @@ const About = () => {
 
                         <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-6">
                             <div>
-                                <h4 className="text-3xl font-black text-brown-light">0 - 1</h4>
+                                <h4 className="text-3xl font-black text-green-400">0 - 1</h4>
                                 <p className="text-sm text-slate-400 font-black uppercase tracking-widest">Years of Experience</p>
                             </div>
                             <div>
-                                <h4 className="text-3xl font-black text-brown drop-shadow-[0_0_10px_rgba(169,132,103,0.4)]">25+</h4>
+                                <h4 className="text-3xl font-black text-green-500 drop-shadow-[0_0_10px_rgba(34,197,94,0.4)]">25+</h4>
                                 <p className="text-sm text-slate-400 font-black uppercase tracking-widest">Projects Completed</p>
                             </div>
                             <div>

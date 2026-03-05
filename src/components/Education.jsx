@@ -4,6 +4,8 @@ import { GraduationCap, School, BookOpen, MapPin, Calendar, ArrowUpRight } from 
 import sco from './school.jpg';
 import poly from './diplomaa.jpg';
 import acro from './acro.jpg';
+import CharacterBanner, { BlackPantherSVG } from './CharacterBanner.jsx';
+import CapShieldDecorative from './CapShieldDecorative.jsx';
 
 const Education = () => {
     const educationData = [
@@ -63,8 +65,31 @@ const Education = () => {
     };
 
     return (
-        <section id="education" className="py-24 bg-slate-900 border-t border-white/5">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="education" className="relative py-24 bg-slate-900 border-t border-white/5 overflow-hidden">
+            {/* Decorative Stars - High Density */}
+            <CapShieldDecorative size={160} className="absolute top-20 -right-20 opacity-[0.03] rotate-12" />
+            <CapShieldDecorative size={130} className="absolute bottom-[20%] -left-10 opacity-[0.04] -rotate-12" />
+            <CapShieldDecorative size={150} className="absolute top-[60%] right-[15%] opacity-[0.02] rotate-45" />
+            <CapShieldDecorative size={230} className="absolute -bottom-10 left-[20%] opacity-[0.015]" />
+            <CapShieldDecorative size={90} className="absolute top-[15%] left-[10%] opacity-[0.03] -rotate-90" />
+            <CapShieldDecorative size={110} className="absolute top-[40%] right-[30%] opacity-[0.02] rotate-12" />
+            <CapShieldDecorative size={70} className="absolute bottom-[40%] left-[5%] opacity-[0.04]" />
+            <CapShieldDecorative size={200} className="absolute top-[10%] right-[40%] opacity-[0.01] rotate-180" />
+            <CapShieldDecorative size={140} className="absolute bottom-[10%] right-[35%] opacity-[0.02] rotate-45" />
+            <CapShieldDecorative size={50} className="absolute top-[60%] left-[45%] opacity-[0.05]" />
+            {/* Added 10 more for extreme density */}
+            <CapShieldDecorative size={270} className="absolute top-[70%] -left-20 opacity-[0.01] rotate-12" />
+            <CapShieldDecorative size={65} className="absolute top-[5%] right-[20%] opacity-[0.035]" />
+            <CapShieldDecorative size={125} className="absolute bottom-[30%] right-[5%] opacity-[0.02] -rotate-90" />
+            <CapShieldDecorative size={45} className="absolute top-[50%] left-[30%] opacity-[0.04]" />
+            <CapShieldDecorative size={320} className="absolute bottom-[-15%] right-[10%] opacity-[0.008] rotate-45" />
+            <CapShieldDecorative size={115} className="absolute top-[35%] left-[60%] opacity-[0.025]" />
+            <CapShieldDecorative size={95} className="absolute bottom-[15%] right-[45%] opacity-[0.03] rotate-180" />
+            <CapShieldDecorative size={165} className="absolute top-[10%] left-[40%] opacity-[0.01] -rotate-12" />
+            <CapShieldDecorative size={55} className="absolute bottom-[50%] left-[15%] opacity-[0.04] rotate-90" />
+            <CapShieldDecorative size={185} className="absolute top-[80%] left-[10%] opacity-[0.015] rotate-45" />
+
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -72,13 +97,24 @@ const Education = () => {
                         viewport={{ once: true }}
                         className="text-4xl font-black text-white md:text-5xl"
                     >
+                        {/* Avengers Character Banner */}
+                        <div className="mt-8">
+                            <CharacterBanner
+                                name="Black Panther"
+                                alias="T'Challa"
+                                quote="Knowledge is the greatest wealth. Wakanda will no longer watch from the shadows."
+                                color="#A855F7"
+                                icon={BlackPantherSVG}
+                                align="right"
+                            />
+                        </div>
                         Academic Background
                     </motion.h2>
                     <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: "80px" }}
                         viewport={{ once: true }}
-                        className="h-1.5 bg-brown mx-auto mt-4 rounded-full"
+                        className="h-1.5 bg-purple-600 mx-auto mt-4 rounded-full"
                     ></motion.div>
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -100,7 +136,7 @@ const Education = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.15 }}
-                            className="group relative bg-white/[0.03] rounded-3xl border border-white/10 hover:border-brown/40 overflow-hidden transition-all duration-500 hover:shadow-[0_0_40px_rgba(169,132,103,0.15)] flex flex-col"
+                            className="group relative bg-white/[0.03] rounded-3xl border border-white/10 hover:border-purple-500/40 overflow-hidden transition-all duration-500 hover:shadow-[0_0_40px_rgba(168,85,247,0.15)] flex flex-col"
                         >
                             {/* Image Section */}
                             <div className="relative w-full h-48 overflow-hidden">
@@ -128,19 +164,19 @@ const Education = () => {
                                 </div>
 
                                 {/* Icon at bottom of image */}
-                                <div className="absolute bottom-3 right-4 p-2.5 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-brown-light group-hover:bg-brown group-hover:text-white group-hover:rotate-12 transition-all duration-300">
+                                <div className="absolute bottom-3 right-4 p-2.5 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 text-purple-light group-hover:bg-purple-600 group-hover:text-white group-hover:rotate-12 transition-all duration-300">
                                     {edu.icon}
                                 </div>
                             </div>
 
                             {/* Content */}
                             <div className="p-6 flex flex-col flex-1">
-                                <h3 className="text-lg font-black text-white leading-tight group-hover:text-brown-light transition-colors mb-3">
+                                <h3 className="text-lg font-black text-white leading-tight group-hover:text-purple-400 transition-colors mb-3">
                                     {edu.title}
                                 </h3>
 
                                 <div className="space-y-2 mb-4">
-                                    <div className="flex items-center gap-2 text-brown-light text-sm font-bold">
+                                    <div className="flex items-center gap-2 text-purple-400 text-sm font-bold">
                                         <School size={14} />
                                         {edu.institution}
                                     </div>
@@ -156,7 +192,7 @@ const Education = () => {
 
                                 {/* University Badge */}
                                 <div className="mb-4">
-                                    <span className="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest px-3 py-1.5 bg-brown/10 text-brown-light border border-brown/20 rounded-lg">
+                                    <span className="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest px-3 py-1.5 bg-purple-600/10 text-purple-400 border border-purple-600/20 rounded-lg">
                                         <GraduationCap size={12} />
                                         {edu.university}
                                     </span>
@@ -170,6 +206,8 @@ const Education = () => {
                         </motion.div>
                     ))}
                 </div>
+
+
             </div>
         </section>
     );

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github, ArrowRight, X, Sparkles, Box, Trophy } from 'lucide-react';
-import cus from './cus.png';
+import { ExternalLink, Github, Eye, Sparkles, Trophy, Box, ArrowRight, Shield, Zap } from 'lucide-react';
+import CapShieldDecorative from './CapShieldDecorative.jsx';
+import CharacterBanner, { AntManSVG } from './CharacterBanner.jsx';
+import cus from './cus.jpg';
 import win from './win.png';
 import jj from './jj.png';
 import hh from './hh.png';
@@ -14,6 +16,7 @@ import re from './port.jpg';
 import sipl from './sipl.jpg';
 import acro from './las.jpg';
 import django from './django1.jpg';
+import holi from './HOLi.jpg';
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -24,7 +27,7 @@ const Projects = () => {
             description: 'Customer Churn Prediction + RFM Segmentation (Machine Learning Project) I recently worked on an exciting Customer Analytics project where I combined RFM Analysis + Churn Prediction to understand customer behavior and improve retention strategies.',
             fullDetail: "1 Customer Segmentation using RFM (Recency, Frequency, Monetary)2 Predicting whether a customer will Churn (Yes/No) using Machine LearningFinding actionable insights to help businesses reduce customer lossKey Steps I Performed:Data Cleaning & PreprocessingFeature Engineering (RFM Scoring + Segmentation)Customer Segmentation into categories ",
             performance: 'accuracy score Y_train 0.73 and accuracy_score y_test 0.72.',
-            tech: ['Python', 'pandas', 'Scikit-Learn', 'RFM', 'Churn Prediction'],
+            tech: ['Python', 'Flask', 'pandas', 'Scikit-Learn', 'RFM', 'Churn Prediction'],
             image: cus,
             github: 'https://github.com/sachinrawat6264384464/Machine-Learning-Projects-Bigner-To-Advanced-Journey-Start-/blob/main/machine%20learning%20practice%20projects/customer%20churn%20prediction.ipynb',
             demo: 'https://www.linkedin.com/posts/sachin-rawatb_machinelearning-datascience-customersegmentation-activity-7429739695590518785-7OGa?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6IRoUBzGzrkp84sI5KXdxL5plTuWQg3uc',
@@ -133,6 +136,18 @@ const Projects = () => {
         }
     ];
 
+    const nlpProjects = [
+        {
+            title: 'Holi Colors Sentiment Analysis ',
+            shortDesc: 'This Holi, I built a Holi Color Sentiment Analyzer using Machine Learning (Logistic Regression), NLP (Natural Language processing) and Flask!',
+            fullDetail: 'Messages sent during Holi carry happiness, excitement, or neutral feelings.This app predicts the sentiment of any Holi message and reflects it with beautiful animated colors on the web app!,Features:- Input your Holi messageGet sentiment prediction instantly See colors animate based on Positive / Neutral / Negative',
+            tech: ['ML', 'Pandas', 'NLP', 'TF-IDF', 'Matplotlib', 'Flask', 'pkl'],
+            image: holi, // Reusing existing image for illustration
+            color: '#2DD4BF',
+            type: 'nlp'
+        }
+    ];
+
     const miniProjects = [
         {
             title: 'Student Habits vs Academic Performance Prediction (Machine Learning Project)',
@@ -140,6 +155,7 @@ const Projects = () => {
             fullDetail: 'In this project, I analyzed how student lifestyle habits impact academic performance and built a Linear Regression model to predict exam scores. After proper data preprocessing (cleaning, encoding, and outlier removal), the model achieved an R² score of 0.90, explaining 90% of the variance in performance. The low MSE, MAE, and RMSE values indicate strong prediction accuracy. This project helped me implement the complete machine learning pipeline from data preparation to model evaluation ',
             tech: ['Python', 'Pandas', 'Linear Regression', 'Scikit-learn', 'Matplotlib'],
             image: student,
+            color: '#EF4444',
             type: 'mini'
         },
         {
@@ -148,6 +164,7 @@ const Projects = () => {
             fullDetail: 'In this project, I predicted sales based on advertising spend across TV, Radio, Social Media, and Influencer categories. I performed data preprocessing, encoded categorical features, and trained multiple regression models including Decision Tree, Random Forest, XGBoost, and Gradient Boosting. After evaluating models using MAE, RMSE, and R² Score, Gradient Boosting performed the best with an R² of 0.9989. This project demonstrates how machine learning can support marketing budget optimization and business decision-making 🚀📊',
             tech: ['Python', 'Pandas', 'xgboost', 'RandomForestRegressor', 'decisionTreeRegressor', 'gradientBoostingRegressor', 'Scikit-learn', 'Matplotlib'],
             image: sales,
+            color: '#EF4444',
             type: 'mini'
         },
         {
@@ -156,13 +173,37 @@ const Projects = () => {
             fullDetail: 'In this project, I built a Sonar Rock vs Mine classification system using a Random Forest classifier to detect whether a sonar signal represents a rock or a mine. I performed data preprocessing and feature scaling, then trained and evaluated the model using accuracy, recall, and a confusion matrix. The model achieved 85.71% accuracy with a strong recall score of 82.14%, which is crucial since missing a mine can be dangerous.',
             tech: ['Sklearn', 'Matplotlib', 'pandas', 'Randomforestclassifier'],
             image: solar,
+            color: '#EF4444',
             type: 'mini'
         }
     ];
 
     return (
-        <section id="projects" className="py-24 bg-slate-900 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="projects" className="relative py-24 bg-slate-900 overflow-hidden">
+            {/* Decorative Stars - High Density */}
+            <CapShieldDecorative size={220} className="absolute top-40 -right-20 opacity-[0.03] rotate-12" />
+            <CapShieldDecorative size={130} className="absolute bottom-[20%] -left-10 opacity-[0.04] -rotate-12" />
+            <CapShieldDecorative size={150} className="absolute top-[60%] right-[10%] opacity-[0.02] rotate-45" />
+            <CapShieldDecorative size={280} className="absolute -top-10 left-[5%] opacity-[0.015] -rotate-90" />
+            <CapShieldDecorative size={100} className="absolute bottom-[40%] right-[30%] opacity-[0.03]" />
+            <CapShieldDecorative size={120} className="absolute top-[10%] left-[40%] opacity-[0.02] rotate-180" />
+            <CapShieldDecorative size={80} className="absolute bottom-[5%] right-[15%] opacity-[0.04] rotate-12" />
+            <CapShieldDecorative size={160} className="absolute top-[75%] left-[25%] opacity-[0.015]" />
+            <CapShieldDecorative size={60} className="absolute bottom-[60%] right-[5%] opacity-[0.05]" />
+            <CapShieldDecorative size={190} className="absolute top-[30%] left-[15%] opacity-[0.01] rotate-45" />
+            {/* Added 10 more for extreme density */}
+            <CapShieldDecorative size={250} className="absolute top-[80%] -right-10 opacity-[0.01] rotate-12" />
+            <CapShieldDecorative size={75} className="absolute top-[5%] left-[30%] opacity-[0.03]" />
+            <CapShieldDecorative size={135} className="absolute bottom-[10%] left-[50%] opacity-[0.02] rotate-180" />
+            <CapShieldDecorative size={45} className="absolute top-[50%] right-[25%] opacity-[0.04]" />
+            <CapShieldDecorative size={340} className="absolute bottom-[-5%] left-[5%] opacity-[0.008] -rotate-12" />
+            <CapShieldDecorative size={115} className="absolute top-[25%] right-[40%] opacity-[0.025]" />
+            <CapShieldDecorative size={95} className="absolute bottom-[35%] left-[10%] opacity-[0.03] rotate-45" />
+            <CapShieldDecorative size={175} className="absolute top-[15%] left-[60%] opacity-[0.015] -rotate-90" />
+            <CapShieldDecorative size={55} className="absolute bottom-[50%] right-[15%] opacity-[0.045] rotate-12" />
+            <CapShieldDecorative size={205} className="absolute top-[45%] left-[35%] opacity-[0.01] rotate-180" />
+
+            <div id="ml-projects" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
                     <div>
@@ -172,13 +213,24 @@ const Projects = () => {
                             viewport={{ once: true }}
                             className="text-4xl font-black text-white md:text-5xl"
                         >
-                            Featured Projects
+                            {/* Avengers Character Banner */}
+                            <div className="mt-10">
+                                <CharacterBanner
+                                    name="Ant-Man"
+                                    alias="Sachin Rawat"
+                                    quote="I believe that, if you look hard enough, you can always find a way."
+                                    color="#EF4444"
+                                    icon={AntManSVG}
+                                    align="right"
+                                />
+                            </div>
+                            Machine Learning Projects
                         </motion.h2>
                         <motion.div
                             initial={{ width: 0 }}
                             whileInView={{ width: "80px" }}
                             viewport={{ once: true }}
-                            className="h-1.5 bg-brown mt-4 rounded-full"
+                            className="h-1.5 bg-red-600 mt-4 rounded-full"
                         ></motion.div>
                     </div>
                 </div>
@@ -192,7 +244,7 @@ const Projects = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group bg-white/5 rounded-3xl overflow-hidden hover:shadow-[0_0_30px_rgba(169,132,103,0.3)] border border-brown/50 hover:border-brown-light transition-all duration-300 backdrop-blur-md"
+                            className="group bg-white/5 rounded-3xl overflow-hidden hover:shadow-[0_0_30px_rgba(239,68,68,0.3)] border border-red-500/50 hover:border-red-400 transition-all duration-300 backdrop-blur-md"
                         >
                             <div className="relative aspect-video overflow-hidden">
                                 <img
@@ -200,11 +252,11 @@ const Projects = () => {
                                     alt={project.title}
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
-                                <div className="absolute inset-0 bg-brown/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
-                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/20 rounded-full text-white hover:bg-brown hover:text-white transition-all transform scale-90 group-hover:scale-100 backdrop-blur-md">
+                                <div className="absolute inset-0 bg-red-600/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/20 rounded-full text-white hover:bg-red-600 hover:text-white transition-all transform scale-90 group-hover:scale-100 backdrop-blur-md">
                                         <Github size={20} />
                                     </a>
-                                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/20 rounded-full text-white hover:bg-brown hover:text-white transition-all transform scale-90 delay-75 group-hover:scale-100 backdrop-blur-md">
+                                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/20 rounded-full text-white hover:bg-red-600 hover:text-white transition-all transform scale-90 delay-75 group-hover:scale-100 backdrop-blur-md">
                                         <ExternalLink size={20} />
                                     </a>
                                 </div>
@@ -213,18 +265,18 @@ const Projects = () => {
                             <div className="p-8">
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {project.tech.map((t) => (
-                                        <span key={t} className="px-2.5 py-1 bg-white/5 text-slate-200 rounded-lg text-xs font-black uppercase border border-white/10 hover:border-light-purple/40 transition-all">
+                                        <span key={t} className="px-2.5 py-1 bg-white/5 text-slate-200 rounded-lg text-xs font-black uppercase border border-white/10 hover:border-red-400/40 transition-all">
                                             {t}
                                         </span>
                                     ))}
                                 </div>
-                                <h3 className="text-2xl font-black text-white mb-3 group-hover:text-brown-light transition-colors">{project.title}</h3>
+                                <h3 className="text-2xl font-black text-white mb-3 group-hover:text-red-400 transition-colors">{project.title}</h3>
                                 <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-6 font-medium line-clamp-2">
                                     {project.description}
                                 </p>
                                 <button
                                     onClick={() => setSelectedProject(project)}
-                                    className="w-full py-3 bg-brown/10 text-brown-light rounded-xl text-sm font-black border border-brown/20 hover:bg-brown hover:text-white transition-all"
+                                    className="w-full py-3 bg-red-600/10 text-red-400 rounded-xl text-sm font-black border border-red-600/20 hover:bg-red-600 hover:text-white transition-all"
                                 >
                                     View Details
                                 </button>
@@ -242,7 +294,7 @@ const Projects = () => {
                             viewport={{ once: true }}
                             className="text-3xl font-black text-white"
                         >
-                            <span className="text-brown-light">#</span> Mini Projects
+                            <span className="text-red-400">#</span> Mini Projects
                         </motion.h3>
                         <p className="text-slate-400 mt-2 font-medium">Small-scale implementations and logic exploration.</p>
                     </div>
@@ -255,17 +307,17 @@ const Projects = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="group relative bg-white/5 p-6 rounded-3xl border border-brown/50 hover:border-brown-light hover:shadow-[0_0_20px_rgba(169,132,103,0.2)] transition-all backdrop-blur-md"
+                                className="group relative bg-white/5 p-6 rounded-3xl border border-red-500/50 hover:border-red-400 hover:shadow-[0_0_20px_rgba(239,68,68,0.2)] transition-all backdrop-blur-md"
                             >
                                 <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-5">
                                     <img src={mini.image} alt={mini.title} className="w-full h-full object-cover grayscale-[50%] group-hover:grayscale-0 transition-all duration-500" />
                                 </div>
-                                <h4 className="text-xl font-black text-white mb-2 group-hover:text-brown-light transition-colors">{mini.title}</h4>
+                                <h4 className="text-xl font-black text-white mb-2 group-hover:text-red-400 transition-colors">{mini.title}</h4>
                                 <p className="text-slate-400 text-sm mb-6 line-clamp-2 font-medium">{mini.shortDesc}</p>
 
                                 <button
                                     onClick={() => setSelectedProject(mini)}
-                                    className="w-full py-3 bg-brown/10 text-brown-light rounded-xl text-sm font-black border border-brown/20 hover:bg-brown hover:text-white transition-all"
+                                    className="w-full py-3 bg-red-600/10 text-red-400 rounded-xl text-sm font-black border border-red-600/20 hover:bg-red-600 hover:text-white transition-all"
                                 >
                                     More Detail
                                 </button>
@@ -277,10 +329,10 @@ const Projects = () => {
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            className="bg-gradient-to-br from-brown-dark/20 to-brown-light/20 p-6 rounded-3xl border border-brown/50 flex flex-col items-center justify-center text-center space-y-4 hover:shadow-[0_0_40px_rgba(169,132,103,0.4)] transition-all cursor-pointer group"
+                            className="bg-gradient-to-br from-red-900/20 to-red-600/20 p-6 rounded-3xl border border-red-500/50 flex flex-col items-center justify-center text-center space-y-4 hover:shadow-[0_0_40px_rgba(239,68,68,0.4)] transition-all cursor-pointer group"
                         >
                             <div className="p-4 bg-white/10 rounded-full border border-white/10 group-hover:scale-110 transition-transform">
-                                <Trophy className="text-brown-light" size={32} />
+                                <Trophy className="text-red-400" size={32} />
                             </div>
                             <div>
                                 <h4 className="text-2xl font-black text-white">25+ Projects</h4>
@@ -290,7 +342,7 @@ const Projects = () => {
                                 href="https://github.com/sachinrawat6264384464"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 text-brown-light font-black text-sm group-hover:translate-x-1 transition-all"
+                                className="flex items-center gap-2 text-red-400 font-black text-sm group-hover:translate-x-1 transition-all"
                             >
                                 See Full GitHub <ArrowRight size={16} />
                             </a>
@@ -298,7 +350,7 @@ const Projects = () => {
                                 href="https://www.linkedin.com/in/sachin-rawatb"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 text-brown-light font-black text-sm group-hover:translate-x-1 transition-all"
+                                className="flex items-center gap-2 text-red-400 font-black text-sm group-hover:translate-x-1 transition-all"
                             >
                                 See LinkedIn <ArrowRight size={16} />
                             </a>
@@ -306,8 +358,95 @@ const Projects = () => {
                     </div>
                 </div>
 
-                {/* Web Development Section - MOVED & STYLED DIFFERENTLY */}
+                {/* NLP Projects Section - NEW */}
                 <div className="pt-24 border-t border-white/5 mt-24">
+                    <div id="nlp-projects" className="mb-12">
+                        <motion.h3
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="text-4xl font-black text-white"
+                        >
+                            <span className="text-teal-400">#</span> NLP Projects
+                        </motion.h3>
+                        <p className="text-slate-400 mt-2 font-medium">Advanced Language Processing & Neural Networks.</p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+                        {nlpProjects.map((nlp, idx) => (
+                            <motion.div
+                                key={nlp.title}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                className="group bg-white/5 rounded-3xl overflow-hidden hover:shadow-[0_0_30px_rgba(45,212,191,0.3)] border border-teal-500/50 hover:border-teal-400 transition-all duration-300 backdrop-blur-md"
+                            >
+                                <div className="relative aspect-video overflow-hidden">
+                                    <img
+                                        src={nlp.image}
+                                        alt={nlp.title}
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                    <div className="absolute inset-0 bg-teal-600/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                                        <a href="#" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/20 rounded-full text-white hover:bg-teal-600 hover:text-white transition-all transform scale-90 group-hover:scale-100 backdrop-blur-md">
+                                            <Github size={20} />
+                                        </a>
+                                        <a href="#" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/20 rounded-full text-white hover:bg-teal-600 hover:text-white transition-all transform scale-90 delay-75 group-hover:scale-100 backdrop-blur-md">
+                                            <ExternalLink size={20} />
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="p-8">
+                                    <div className="flex flex-wrap gap-2 mb-4">
+                                        {nlp.tech.map((t) => (
+                                            <span key={t} className="px-2.5 py-1 bg-white/5 text-slate-200 rounded-lg text-xs font-black uppercase border border-white/10 hover:border-teal-400/40 transition-all">
+                                                {t}
+                                            </span>
+                                        ))}
+                                    </div>
+                                    <h3 className="text-2xl font-black text-white mb-3 group-hover:text-teal-400 transition-colors">{nlp.title}</h3>
+                                    <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-6 font-medium line-clamp-2">
+                                        {nlp.shortDesc}
+                                    </p>
+                                    <button
+                                        onClick={() => setSelectedProject(nlp)}
+                                        className="w-full py-3 bg-teal-600/10 text-teal-400 rounded-xl text-sm font-black border border-teal-600/20 hover:bg-teal-600 hover:text-white transition-all"
+                                    >
+                                        Explore Neural Architecture
+                                    </button>
+                                </div>
+                            </motion.div>
+                        ))}
+                        {/* View All Card */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            className="bg-gradient-to-br from-teal-900/20 to-teal-600/20 p-6 rounded-3xl border border-teal-500/50 flex flex-col items-center justify-center text-center space-y-4 hover:shadow-[0_0_40px_rgba(45,212,191,0.4)] transition-all cursor-pointer group"
+                        >
+                            <div className="p-4 bg-white/10 rounded-full border border-white/10 group-hover:scale-110 transition-transform">
+                                <Trophy className="text-teal-400" size={32} />
+                            </div>
+                            <div>
+                                <h4 className="text-2xl font-black text-white">NLP Projects</h4>
+                                <p className="text-slate-200 text-sm font-bold uppercase tracking-widest mt-1">Explored & Built</p>
+                            </div>
+                            <a
+                                href="https://github.com/sachinrawat6264384464/NLP-Projects-Journey-start-"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 text-teal-400 font-black text-sm group-hover:translate-x-1 transition-all"
+                            >
+                                See Full GitHub <ArrowRight size={16} />
+                            </a>
+                        </motion.div>
+                    </div>
+                </div>
+
+                {/* Web Development Section - MOVED & STYLED DIFFERENTLY */}
+                <div id="web-projects" className="pt-24 border-t border-white/5 mt-24">
                     <div className="flex border-b border-white/10 pb-6 mb-16 items-center justify-between">
                         <div>
                             <motion.h2
@@ -316,7 +455,7 @@ const Projects = () => {
                                 viewport={{ once: true }}
                                 className="text-4xl font-black text-white flex items-center gap-3"
                             >
-                                <Box className="text-brown-light" /> Web Apps & Dev
+                                <Box className="text-red-400" /> Web Apps & Dev
                             </motion.h2>
                             <p className="text-slate-400 mt-2 font-medium tracking-wide">Full-stack solutions and responsive web experiences.</p>
                         </div>
@@ -330,7 +469,7 @@ const Projects = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="group bg-white/5 rounded-3xl overflow-hidden hover:shadow-[0_0_30px_rgba(169,132,103,0.3)] border border-brown/50 hover:border-brown-light transition-all duration-300 backdrop-blur-md"
+                                className="group bg-white/5 rounded-3xl overflow-hidden hover:shadow-[0_0_30px_rgba(239,68,68,0.3)] border border-red-500/50 hover:border-red-400 transition-all duration-300 backdrop-blur-md"
                             >
                                 <div className="relative aspect-video overflow-hidden">
                                     <img
@@ -338,11 +477,11 @@ const Projects = () => {
                                         alt={project.title}
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
-                                    <div className="absolute inset-0 bg-brown/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
-                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/20 rounded-full text-white hover:bg-brown hover:text-white transition-all transform scale-90 group-hover:scale-100 backdrop-blur-md">
+                                    <div className="absolute inset-0 bg-red-600/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/20 rounded-full text-white hover:bg-red-600 hover:text-white transition-all transform scale-90 group-hover:scale-100 backdrop-blur-md">
                                             <Github size={20} />
                                         </a>
-                                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/20 rounded-full text-white hover:bg-brown hover:text-white transition-all transform scale-90 delay-75 group-hover:scale-100 backdrop-blur-md">
+                                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/20 rounded-full text-white hover:bg-red-600 hover:text-white transition-all transform scale-90 delay-75 group-hover:scale-100 backdrop-blur-md">
                                             <ExternalLink size={20} />
                                         </a>
                                     </div>
@@ -351,18 +490,18 @@ const Projects = () => {
                                 <div className="p-8">
                                     <div className="flex flex-wrap gap-2 mb-4">
                                         {project.tech.map((t) => (
-                                            <span key={t} className="px-2.5 py-1 bg-white/5 text-slate-200 rounded-lg text-xs font-black uppercase border border-white/10 hover:border-light-purple/40 transition-all">
+                                            <span key={t} className="px-2.5 py-1 bg-white/5 text-slate-200 rounded-lg text-xs font-black uppercase border border-white/10 hover:border-red-400/40 transition-all">
                                                 {t}
                                             </span>
                                         ))}
                                     </div>
-                                    <h3 className="text-2xl font-black text-white mb-3 group-hover:text-brown-light transition-colors">{project.title}</h3>
+                                    <h3 className="text-2xl font-black text-white mb-3 group-hover:text-red-400 transition-colors">{project.title}</h3>
                                     <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-6 font-medium line-clamp-2">
                                         {project.description}
                                     </p>
                                     <button
                                         onClick={() => setSelectedProject(project)}
-                                        className="w-full py-3 bg-brown/10 text-brown-light rounded-xl text-sm font-black border border-brown/20 hover:bg-brown hover:text-white transition-all"
+                                        className="w-full py-3 bg-red-600/10 text-red-400 rounded-xl text-sm font-black border border-red-600/20 hover:bg-red-600 hover:text-white transition-all"
                                     >
                                         View Details
                                     </button>
@@ -375,10 +514,10 @@ const Projects = () => {
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            className="bg-gradient-to-br from-brown-dark/20 to-brown-light/20 p-6 rounded-3xl border border-brown/50 flex flex-col items-center justify-center text-center space-y-4 hover:shadow-[0_0_40px_rgba(169,132,103,0.4)] transition-all cursor-pointer group"
+                            className="bg-gradient-to-br from-red-900/20 to-red-600/20 p-6 rounded-3xl border border-red-500/50 flex flex-col items-center justify-center text-center space-y-4 hover:shadow-[0_0_40px_rgba(239,68,68,0.4)] transition-all cursor-pointer group"
                         >
                             <div className="p-4 bg-white/10 rounded-full border border-white/10 group-hover:scale-110 transition-transform">
-                                <Trophy className="text-brown-light" size={32} />
+                                <Trophy className="text-red-400" size={32} />
                             </div>
                             <div>
                                 <h4 className="text-2xl font-black text-white">25+ Projects</h4>
@@ -388,7 +527,7 @@ const Projects = () => {
                                 href="https://github.com/sachinrawat6264384464"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 text-brown-light font-black text-sm group-hover:translate-x-1 transition-all"
+                                className="flex items-center gap-2 text-red-400 font-black text-sm group-hover:translate-x-1 transition-all"
                             >
                                 See Full GitHub <ArrowRight size={16} />
                             </a>
@@ -396,7 +535,7 @@ const Projects = () => {
                                 href="https://www.linkedin.com/in/sachin-rawatb"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 text-brown-light font-black text-sm group-hover:translate-x-1 transition-all"
+                                className="flex items-center gap-2 text-red-400 font-black text-sm group-hover:translate-x-1 transition-all"
                             >
                                 See LinkedIn <ArrowRight size={16} />
                             </a>
@@ -430,7 +569,7 @@ const Projects = () => {
                             {/* Close Button */}
                             <button
                                 onClick={() => setSelectedProject(null)}
-                                className="absolute top-3 right-3 z-20 p-2 bg-black/50 hover:bg-brown/60 text-white rounded-full transition-all backdrop-blur-sm"
+                                className={`absolute top-3 right-3 z-20 p-2 bg-black/50 ${selectedProject.type === 'nlp' ? 'hover:bg-teal-600/60' : 'hover:bg-red-600/60'} text-white rounded-full transition-all backdrop-blur-sm`}
                             >
                                 <X size={18} />
                             </button>
@@ -449,89 +588,52 @@ const Projects = () => {
 
                             {/* RIGHT — Scrollable Content */}
                             <div className="flex-1 overflow-y-auto p-5 sm:p-7 flex flex-col">
-                                <div className="flex items-center gap-2 text-brown-light mb-2">
+                                <div className={`flex items-center gap-2 ${selectedProject.type === 'nlp' ? 'text-teal-400' : 'text-red-400'} mb-2`}>
                                     <Sparkles size={14} />
                                     <span className="text-[10px] font-black uppercase tracking-[0.2em]">Project Insights</span>
                                 </div>
-
                                 <h3 className="text-xl sm:text-2xl font-black text-white mb-4 leading-tight pr-6">
                                     {selectedProject.title}
                                 </h3>
-
                                 <div className="space-y-4 mb-5">
                                     <div>
-                                        <p className="text-brown-light text-[9px] font-black uppercase tracking-widest mb-1.5 opacity-70">Description</p>
+                                        <p className={`${selectedProject.type === 'nlp' ? 'text-teal-400' : 'text-red-400'} text-[9px] font-black uppercase tracking-widest mb-1.5 opacity-70`}>Description</p>
                                         <p className="text-slate-300 text-sm leading-relaxed font-medium">
                                             {selectedProject.fullDetail || selectedProject.description}
                                         </p>
                                     </div>
-
                                     {selectedProject.performance && (
                                         <div>
-                                            <p className="text-brown-light text-[9px] font-black uppercase tracking-widest mb-1.5 opacity-70">Impact & Performance</p>
-                                            <p className="text-slate-200 text-sm font-black leading-relaxed italic border-l-2 border-brown pl-3">
+                                            <p className={`${selectedProject.type === 'nlp' ? 'text-teal-400' : 'text-red-400'} text-[9px] font-black uppercase tracking-widest mb-1.5 opacity-70`}>Impact & Performance</p>
+                                            <p className={`text-slate-200 text-sm font-black leading-relaxed italic border-l-2 ${selectedProject.type === 'nlp' ? 'border-teal-600' : 'border-red-600'} pl-3`}>
                                                 &ldquo;{selectedProject.performance}&rdquo;
                                             </p>
                                         </div>
                                     )}
                                 </div>
-
                                 {/* Tech Badges */}
                                 <div className="flex flex-wrap gap-1.5 mb-5">
                                     {selectedProject.tech.map(t => (
-                                        <span key={t} className="px-2.5 py-1 bg-brown/10 text-brown-light rounded-lg text-[11px] font-black border border-brown/20">
+                                        <span key={t} className={`px-2.5 py-1 ${selectedProject.type === 'nlp' ? 'bg-teal-600/10 text-teal-400 border-teal-600/20' : 'bg-red-600/10 text-red-400 border-red-600/20'} rounded-lg text-[11px] font-black border`}>
                                             {t}
                                         </span>
                                     ))}
                                 </div>
-
                                 {/* Back Button */}
                                 <div className="mt-auto pt-2">
                                     <button
                                         onClick={() => setSelectedProject(null)}
-                                        className="w-full py-3 bg-brown text-white rounded-2xl font-black shadow-lg shadow-brown/20 hover:shadow-brown/40 transition-all active:scale-[0.98] text-sm"
+                                        className={`w-full py-3 ${selectedProject.type === 'nlp' ? 'bg-teal-600 shadow-teal-600/20 hover:shadow-teal-600/40' : 'bg-red-600 shadow-red-600/20 hover:shadow-red-600/40'} text-white rounded-2xl font-black transition-all active:scale-[0.98] text-sm`}
                                     >
                                         Back to Projects
                                     </button>
                                 </div>
                             </div>
                         </motion.div>
-                        {/* View All Card */}
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            className="bg-gradient-to-br from-brown-dark/20 to-brown-light/20 p-6 rounded-3xl border border-brown/50 flex flex-col items-center justify-center text-center space-y-4 hover:shadow-[0_0_40px_rgba(169,132,103,0.4)] transition-all cursor-pointer group"
-                        >
-                            <div className="p-4 bg-white/10 rounded-full border border-white/10 group-hover:scale-110 transition-transform">
-                                <Trophy className="text-brown-light" size={32} />
-                            </div>
-                            <div>
-                                <h4 className="text-2xl font-black text-white">25+ Projects</h4>
-                                <p className="text-slate-200 text-sm font-bold uppercase tracking-widest mt-1">Explored & Built</p>
-                            </div>
-                            <a
-                                href="https://github.com/sachinrawat6264384464"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-2 text-brown-light font-black text-sm group-hover:translate-x-1 transition-all"
-                            >
-                                See Full GitHub <ArrowRight size={16} />
-                            </a>
-                            <a
-                                href="https://www.linkedin.com/in/sachin-rawatb"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-2 text-brown-light font-black text-sm group-hover:translate-x-1 transition-all"
-                            >
-                                See LinkedIn <ArrowRight size={16} />
-                            </a>
-                        </motion.div>
-
                     </div>
                 )}
             </AnimatePresence>
-        </section>
+        </section >
     );
 };
 
