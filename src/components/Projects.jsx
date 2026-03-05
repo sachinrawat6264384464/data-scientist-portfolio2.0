@@ -13,10 +13,9 @@ import student from './student.jpg';
 import sales from './sales.jpg';
 import solar from './solar.jpg';
 import re from './port.jpg';
-import sipl from './sipl.jpg';
 import acro from './las.jpg';
 import django from './django1.jpg';
-import holi from './HOLi.jpg';
+import holi from './HOli.jpg';
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
